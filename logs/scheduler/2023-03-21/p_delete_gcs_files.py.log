@@ -2720,3 +2720,171 @@ airflow.exceptions.AirflowException: missing keyword argument 'bucket_name'
 [2023-03-21T16:49:31.618+0000] {logging_mixin.py:137} INFO - [2023-03-21T16:49:31.617+0000] {dag.py:2693} INFO - Sync 1 DAGs
 [2023-03-21T16:49:31.738+0000] {logging_mixin.py:137} INFO - [2023-03-21T16:49:31.737+0000] {dag.py:3444} INFO - Setting next_dagrun for project_delete_gcs_files to None, run_after=None
 [2023-03-21T16:49:31.821+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_delete_gcs_files.py took 1.433 seconds
+[2023-03-21T18:01:45.998+0000] {processor.py:153} INFO - Started process (PID=70) to work on /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:01:46.001+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_delete_gcs_files.py for tasks to queue
+[2023-03-21T18:01:46.007+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:01:46.006+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:01:58.255+0000] {processor.py:753} INFO - DAG(s) dict_keys(['project_delete_gcs_files']) retrieved from /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:01:59.240+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:01:59.239+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-03-21T18:01:59.691+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:01:59.690+0000] {dag.py:3444} INFO - Setting next_dagrun for project_delete_gcs_files to None, run_after=None
+[2023-03-21T18:01:59.962+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_delete_gcs_files.py took 14.040 seconds
+[2023-03-21T18:02:30.204+0000] {processor.py:153} INFO - Started process (PID=133) to work on /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:02:30.214+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_delete_gcs_files.py for tasks to queue
+[2023-03-21T18:02:30.223+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:02:30.222+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:02:31.597+0000] {processor.py:753} INFO - DAG(s) dict_keys(['project_delete_gcs_files']) retrieved from /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:02:31.692+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:02:31.691+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-03-21T18:02:31.823+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:02:31.823+0000] {dag.py:3444} INFO - Setting next_dagrun for project_delete_gcs_files to None, run_after=None
+[2023-03-21T18:02:31.939+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_delete_gcs_files.py took 1.743 seconds
+[2023-03-21T18:03:02.274+0000] {processor.py:153} INFO - Started process (PID=181) to work on /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:03:02.276+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_delete_gcs_files.py for tasks to queue
+[2023-03-21T18:03:02.278+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:03:02.277+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:03:03.019+0000] {processor.py:753} INFO - DAG(s) dict_keys(['project_delete_gcs_files']) retrieved from /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:03:03.063+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:03:03.062+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-03-21T18:03:03.122+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:03:03.122+0000] {dag.py:3444} INFO - Setting next_dagrun for project_delete_gcs_files to None, run_after=None
+[2023-03-21T18:03:03.180+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_delete_gcs_files.py took 0.913 seconds
+[2023-03-21T18:03:33.357+0000] {processor.py:153} INFO - Started process (PID=238) to work on /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:03:33.366+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_delete_gcs_files.py for tasks to queue
+[2023-03-21T18:03:33.375+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:03:33.374+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:03:34.040+0000] {processor.py:753} INFO - DAG(s) dict_keys(['project_delete_gcs_files']) retrieved from /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:03:34.071+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:03:34.070+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-03-21T18:03:34.103+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:03:34.103+0000] {dag.py:3444} INFO - Setting next_dagrun for project_delete_gcs_files to None, run_after=None
+[2023-03-21T18:03:34.160+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_delete_gcs_files.py took 0.811 seconds
+[2023-03-21T18:04:04.674+0000] {processor.py:153} INFO - Started process (PID=293) to work on /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:04:04.676+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_delete_gcs_files.py for tasks to queue
+[2023-03-21T18:04:04.677+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:04:04.677+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:04:05.587+0000] {processor.py:753} INFO - DAG(s) dict_keys(['project_delete_gcs_files']) retrieved from /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:04:05.625+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:04:05.624+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-03-21T18:04:05.660+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:04:05.660+0000] {dag.py:3444} INFO - Setting next_dagrun for project_delete_gcs_files to None, run_after=None
+[2023-03-21T18:04:05.691+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_delete_gcs_files.py took 1.025 seconds
+[2023-03-21T18:04:36.156+0000] {processor.py:153} INFO - Started process (PID=337) to work on /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:04:36.172+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_delete_gcs_files.py for tasks to queue
+[2023-03-21T18:04:36.174+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:04:36.173+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:04:37.722+0000] {processor.py:753} INFO - DAG(s) dict_keys(['project_delete_gcs_files']) retrieved from /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:04:37.785+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:04:37.784+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-03-21T18:04:38.063+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:04:38.062+0000] {dag.py:3444} INFO - Setting next_dagrun for project_delete_gcs_files to None, run_after=None
+[2023-03-21T18:04:38.209+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_delete_gcs_files.py took 2.110 seconds
+[2023-03-21T18:05:09.191+0000] {processor.py:153} INFO - Started process (PID=394) to work on /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:05:09.194+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_delete_gcs_files.py for tasks to queue
+[2023-03-21T18:05:09.206+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:05:09.202+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:05:10.091+0000] {processor.py:753} INFO - DAG(s) dict_keys(['project_delete_gcs_files']) retrieved from /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:05:10.120+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:05:10.119+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-03-21T18:05:10.155+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:05:10.155+0000] {dag.py:3444} INFO - Setting next_dagrun for project_delete_gcs_files to None, run_after=None
+[2023-03-21T18:05:10.179+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_delete_gcs_files.py took 1.022 seconds
+[2023-03-21T18:05:40.499+0000] {processor.py:153} INFO - Started process (PID=448) to work on /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:05:40.501+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_delete_gcs_files.py for tasks to queue
+[2023-03-21T18:05:40.503+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:05:40.502+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:05:41.327+0000] {processor.py:753} INFO - DAG(s) dict_keys(['project_delete_gcs_files']) retrieved from /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:05:41.402+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:05:41.401+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-03-21T18:05:41.454+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:05:41.454+0000] {dag.py:3444} INFO - Setting next_dagrun for project_delete_gcs_files to None, run_after=None
+[2023-03-21T18:05:41.495+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_delete_gcs_files.py took 1.004 seconds
+[2023-03-21T18:06:13.182+0000] {processor.py:153} INFO - Started process (PID=505) to work on /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:06:13.184+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_delete_gcs_files.py for tasks to queue
+[2023-03-21T18:06:13.186+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:06:13.185+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:06:14.041+0000] {processor.py:753} INFO - DAG(s) dict_keys(['project_delete_gcs_files']) retrieved from /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:06:14.086+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:06:14.085+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-03-21T18:06:14.148+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:06:14.147+0000] {dag.py:3444} INFO - Setting next_dagrun for project_delete_gcs_files to None, run_after=None
+[2023-03-21T18:06:14.188+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_delete_gcs_files.py took 1.014 seconds
+[2023-03-21T18:06:44.766+0000] {processor.py:153} INFO - Started process (PID=561) to work on /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:06:44.773+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_delete_gcs_files.py for tasks to queue
+[2023-03-21T18:06:44.780+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:06:44.779+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:06:46.367+0000] {processor.py:753} INFO - DAG(s) dict_keys(['project_delete_gcs_files']) retrieved from /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:06:46.435+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:06:46.434+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-03-21T18:06:46.547+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:06:46.546+0000] {dag.py:3444} INFO - Setting next_dagrun for project_delete_gcs_files to None, run_after=None
+[2023-03-21T18:06:46.654+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_delete_gcs_files.py took 1.915 seconds
+[2023-03-21T18:07:16.908+0000] {processor.py:153} INFO - Started process (PID=617) to work on /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:07:16.909+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_delete_gcs_files.py for tasks to queue
+[2023-03-21T18:07:16.910+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:07:16.910+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:07:17.524+0000] {processor.py:753} INFO - DAG(s) dict_keys(['project_delete_gcs_files']) retrieved from /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:07:17.571+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:07:17.570+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-03-21T18:07:17.643+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:07:17.643+0000] {dag.py:3444} INFO - Setting next_dagrun for project_delete_gcs_files to None, run_after=None
+[2023-03-21T18:07:17.726+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_delete_gcs_files.py took 0.824 seconds
+[2023-03-21T18:07:47.950+0000] {processor.py:153} INFO - Started process (PID=674) to work on /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:07:47.963+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_delete_gcs_files.py for tasks to queue
+[2023-03-21T18:07:47.965+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:07:47.964+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:07:48.693+0000] {processor.py:753} INFO - DAG(s) dict_keys(['project_delete_gcs_files']) retrieved from /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:07:48.733+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:07:48.732+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-03-21T18:07:48.790+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:07:48.790+0000] {dag.py:3444} INFO - Setting next_dagrun for project_delete_gcs_files to None, run_after=None
+[2023-03-21T18:07:48.825+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_delete_gcs_files.py took 0.883 seconds
+[2023-03-21T18:08:19.137+0000] {processor.py:153} INFO - Started process (PID=732) to work on /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:08:19.151+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_delete_gcs_files.py for tasks to queue
+[2023-03-21T18:08:19.152+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:08:19.152+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:08:21.120+0000] {processor.py:753} INFO - DAG(s) dict_keys(['project_delete_gcs_files']) retrieved from /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:08:21.254+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:08:21.253+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-03-21T18:08:21.347+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:08:21.346+0000] {dag.py:3444} INFO - Setting next_dagrun for project_delete_gcs_files to None, run_after=None
+[2023-03-21T18:08:21.423+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_delete_gcs_files.py took 2.311 seconds
+[2023-03-21T18:08:51.536+0000] {processor.py:153} INFO - Started process (PID=789) to work on /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:08:51.546+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_delete_gcs_files.py for tasks to queue
+[2023-03-21T18:08:51.550+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:08:51.550+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:08:52.406+0000] {processor.py:753} INFO - DAG(s) dict_keys(['project_delete_gcs_files']) retrieved from /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:08:52.500+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:08:52.498+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-03-21T18:08:52.607+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:08:52.607+0000] {dag.py:3444} INFO - Setting next_dagrun for project_delete_gcs_files to None, run_after=None
+[2023-03-21T18:08:52.698+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_delete_gcs_files.py took 1.170 seconds
+[2023-03-21T18:09:23.020+0000] {processor.py:153} INFO - Started process (PID=845) to work on /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:09:23.030+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_delete_gcs_files.py for tasks to queue
+[2023-03-21T18:09:23.032+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:09:23.032+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:09:24.075+0000] {processor.py:753} INFO - DAG(s) dict_keys(['project_delete_gcs_files']) retrieved from /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:09:24.117+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:09:24.116+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-03-21T18:09:24.175+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:09:24.175+0000] {dag.py:3444} INFO - Setting next_dagrun for project_delete_gcs_files to None, run_after=None
+[2023-03-21T18:09:24.216+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_delete_gcs_files.py took 1.216 seconds
+[2023-03-21T18:09:54.501+0000] {processor.py:153} INFO - Started process (PID=901) to work on /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:09:54.519+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_delete_gcs_files.py for tasks to queue
+[2023-03-21T18:09:54.523+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:09:54.523+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:09:56.545+0000] {processor.py:753} INFO - DAG(s) dict_keys(['project_delete_gcs_files']) retrieved from /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:09:56.648+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:09:56.638+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-03-21T18:09:56.803+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:09:56.802+0000] {dag.py:3444} INFO - Setting next_dagrun for project_delete_gcs_files to None, run_after=None
+[2023-03-21T18:09:56.863+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_delete_gcs_files.py took 2.377 seconds
+[2023-03-21T18:10:27.396+0000] {processor.py:153} INFO - Started process (PID=956) to work on /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:10:27.408+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_delete_gcs_files.py for tasks to queue
+[2023-03-21T18:10:27.415+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:10:27.415+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:10:29.728+0000] {processor.py:753} INFO - DAG(s) dict_keys(['project_delete_gcs_files']) retrieved from /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:10:29.844+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:10:29.842+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-03-21T18:10:30.015+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:10:30.014+0000] {dag.py:3444} INFO - Setting next_dagrun for project_delete_gcs_files to None, run_after=None
+[2023-03-21T18:10:30.120+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_delete_gcs_files.py took 2.737 seconds
+[2023-03-21T18:11:00.329+0000] {processor.py:153} INFO - Started process (PID=1017) to work on /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:11:00.332+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_delete_gcs_files.py for tasks to queue
+[2023-03-21T18:11:00.333+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:11:00.333+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:11:01.965+0000] {processor.py:753} INFO - DAG(s) dict_keys(['project_delete_gcs_files']) retrieved from /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:11:02.064+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:11:02.063+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-03-21T18:11:02.335+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:11:02.335+0000] {dag.py:3444} INFO - Setting next_dagrun for project_delete_gcs_files to None, run_after=None
+[2023-03-21T18:11:02.415+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_delete_gcs_files.py took 2.094 seconds
+[2023-03-21T18:11:33.095+0000] {processor.py:153} INFO - Started process (PID=1068) to work on /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:11:33.106+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_delete_gcs_files.py for tasks to queue
+[2023-03-21T18:11:33.108+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:11:33.108+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:11:33.903+0000] {processor.py:753} INFO - DAG(s) dict_keys(['project_delete_gcs_files']) retrieved from /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:11:34.045+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:11:34.042+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-03-21T18:11:34.094+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:11:34.093+0000] {dag.py:3444} INFO - Setting next_dagrun for project_delete_gcs_files to None, run_after=None
+[2023-03-21T18:11:34.124+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_delete_gcs_files.py took 1.044 seconds
+[2023-03-21T18:12:04.641+0000] {processor.py:153} INFO - Started process (PID=1126) to work on /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:12:04.643+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_delete_gcs_files.py for tasks to queue
+[2023-03-21T18:12:04.645+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:12:04.645+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:12:05.446+0000] {processor.py:753} INFO - DAG(s) dict_keys(['project_delete_gcs_files']) retrieved from /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:12:05.489+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:12:05.488+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-03-21T18:12:05.547+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:12:05.547+0000] {dag.py:3444} INFO - Setting next_dagrun for project_delete_gcs_files to None, run_after=None
+[2023-03-21T18:12:05.586+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_delete_gcs_files.py took 0.952 seconds
+[2023-03-21T18:12:36.080+0000] {processor.py:153} INFO - Started process (PID=1183) to work on /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:12:36.082+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_delete_gcs_files.py for tasks to queue
+[2023-03-21T18:12:36.084+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:12:36.084+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:12:36.722+0000] {processor.py:753} INFO - DAG(s) dict_keys(['project_delete_gcs_files']) retrieved from /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:12:36.751+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:12:36.750+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-03-21T18:12:36.784+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:12:36.784+0000] {dag.py:3444} INFO - Setting next_dagrun for project_delete_gcs_files to None, run_after=None
+[2023-03-21T18:12:36.809+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_delete_gcs_files.py took 0.737 seconds
+[2023-03-21T18:13:07.737+0000] {processor.py:153} INFO - Started process (PID=1240) to work on /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:13:07.739+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_delete_gcs_files.py for tasks to queue
+[2023-03-21T18:13:07.740+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:13:07.740+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:13:08.257+0000] {processor.py:753} INFO - DAG(s) dict_keys(['project_delete_gcs_files']) retrieved from /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:13:08.286+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:13:08.286+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-03-21T18:13:08.319+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:13:08.319+0000] {dag.py:3444} INFO - Setting next_dagrun for project_delete_gcs_files to None, run_after=None
+[2023-03-21T18:13:08.347+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_delete_gcs_files.py took 0.618 seconds
+[2023-03-21T18:13:38.432+0000] {processor.py:153} INFO - Started process (PID=1296) to work on /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:13:38.443+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_delete_gcs_files.py for tasks to queue
+[2023-03-21T18:13:38.445+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:13:38.444+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:13:40.449+0000] {processor.py:753} INFO - DAG(s) dict_keys(['project_delete_gcs_files']) retrieved from /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:13:40.491+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:13:40.490+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-03-21T18:13:40.547+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:13:40.546+0000] {dag.py:3444} INFO - Setting next_dagrun for project_delete_gcs_files to None, run_after=None
+[2023-03-21T18:13:40.584+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_delete_gcs_files.py took 2.173 seconds
+[2023-03-21T18:14:10.782+0000] {processor.py:153} INFO - Started process (PID=1343) to work on /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:14:10.784+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_delete_gcs_files.py for tasks to queue
+[2023-03-21T18:14:10.786+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:14:10.786+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:14:12.363+0000] {processor.py:753} INFO - DAG(s) dict_keys(['project_delete_gcs_files']) retrieved from /opt/airflow/dags/p_delete_gcs_files.py
+[2023-03-21T18:14:12.504+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:14:12.502+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-03-21T18:14:12.699+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:14:12.699+0000] {dag.py:3444} INFO - Setting next_dagrun for project_delete_gcs_files to None, run_after=None
+[2023-03-21T18:14:12.841+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_delete_gcs_files.py took 2.084 seconds

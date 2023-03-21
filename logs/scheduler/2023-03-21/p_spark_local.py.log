@@ -13445,3 +13445,171 @@
 [2023-03-21T16:49:49.581+0000] {logging_mixin.py:137} INFO - [2023-03-21T16:49:49.581+0000] {dag.py:2693} INFO - Sync 1 DAGs
 [2023-03-21T16:49:49.743+0000] {logging_mixin.py:137} INFO - [2023-03-21T16:49:49.743+0000] {dag.py:3444} INFO - Setting next_dagrun for spark_local_dag to None, run_after=None
 [2023-03-21T16:49:49.872+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_spark_local.py took 0.786 seconds
+[2023-03-21T18:02:15.705+0000] {processor.py:153} INFO - Started process (PID=104) to work on /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:02:15.727+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_spark_local.py for tasks to queue
+[2023-03-21T18:02:15.729+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:02:15.728+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:02:16.157+0000] {processor.py:753} INFO - DAG(s) dict_keys(['spark_local_dag']) retrieved from /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:02:16.819+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:02:16.818+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-03-21T18:02:16.967+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:02:16.967+0000] {dag.py:3444} INFO - Setting next_dagrun for spark_local_dag to None, run_after=None
+[2023-03-21T18:02:17.187+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_spark_local.py took 1.511 seconds
+[2023-03-21T18:02:47.933+0000] {processor.py:153} INFO - Started process (PID=159) to work on /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:02:47.961+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_spark_local.py for tasks to queue
+[2023-03-21T18:02:47.982+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:02:47.979+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:02:48.468+0000] {processor.py:753} INFO - DAG(s) dict_keys(['spark_local_dag']) retrieved from /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:02:48.602+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:02:48.602+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-03-21T18:02:48.723+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:02:48.723+0000] {dag.py:3444} INFO - Setting next_dagrun for spark_local_dag to None, run_after=None
+[2023-03-21T18:02:48.844+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_spark_local.py took 0.956 seconds
+[2023-03-21T18:03:19.219+0000] {processor.py:153} INFO - Started process (PID=207) to work on /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:03:19.221+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_spark_local.py for tasks to queue
+[2023-03-21T18:03:19.223+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:03:19.222+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:03:19.486+0000] {processor.py:753} INFO - DAG(s) dict_keys(['spark_local_dag']) retrieved from /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:03:19.538+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:03:19.538+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-03-21T18:03:19.596+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:03:19.595+0000] {dag.py:3444} INFO - Setting next_dagrun for spark_local_dag to None, run_after=None
+[2023-03-21T18:03:19.634+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_spark_local.py took 0.427 seconds
+[2023-03-21T18:03:49.734+0000] {processor.py:153} INFO - Started process (PID=263) to work on /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:03:49.735+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_spark_local.py for tasks to queue
+[2023-03-21T18:03:49.736+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:03:49.736+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:03:49.839+0000] {processor.py:753} INFO - DAG(s) dict_keys(['spark_local_dag']) retrieved from /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:03:49.891+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:03:49.890+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-03-21T18:03:49.933+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:03:49.933+0000] {dag.py:3444} INFO - Setting next_dagrun for spark_local_dag to None, run_after=None
+[2023-03-21T18:03:49.958+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_spark_local.py took 0.230 seconds
+[2023-03-21T18:04:20.846+0000] {processor.py:153} INFO - Started process (PID=319) to work on /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:04:20.851+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_spark_local.py for tasks to queue
+[2023-03-21T18:04:20.855+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:04:20.854+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:04:21.220+0000] {processor.py:753} INFO - DAG(s) dict_keys(['spark_local_dag']) retrieved from /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:04:21.308+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:04:21.307+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-03-21T18:04:21.427+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:04:21.426+0000] {dag.py:3444} INFO - Setting next_dagrun for spark_local_dag to None, run_after=None
+[2023-03-21T18:04:21.495+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_spark_local.py took 0.682 seconds
+[2023-03-21T18:04:52.193+0000] {processor.py:153} INFO - Started process (PID=363) to work on /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:04:52.195+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_spark_local.py for tasks to queue
+[2023-03-21T18:04:52.197+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:04:52.197+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:04:52.366+0000] {processor.py:753} INFO - DAG(s) dict_keys(['spark_local_dag']) retrieved from /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:04:52.415+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:04:52.415+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-03-21T18:04:52.468+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:04:52.468+0000] {dag.py:3444} INFO - Setting next_dagrun for spark_local_dag to None, run_after=None
+[2023-03-21T18:04:52.506+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_spark_local.py took 0.321 seconds
+[2023-03-21T18:05:23.336+0000] {processor.py:153} INFO - Started process (PID=419) to work on /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:05:23.338+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_spark_local.py for tasks to queue
+[2023-03-21T18:05:23.341+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:05:23.341+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:05:23.461+0000] {processor.py:753} INFO - DAG(s) dict_keys(['spark_local_dag']) retrieved from /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:05:23.496+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:05:23.496+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-03-21T18:05:23.536+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:05:23.536+0000] {dag.py:3444} INFO - Setting next_dagrun for spark_local_dag to None, run_after=None
+[2023-03-21T18:05:23.563+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_spark_local.py took 0.233 seconds
+[2023-03-21T18:05:53.674+0000] {processor.py:153} INFO - Started process (PID=476) to work on /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:05:53.676+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_spark_local.py for tasks to queue
+[2023-03-21T18:05:53.678+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:05:53.677+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:05:53.839+0000] {processor.py:753} INFO - DAG(s) dict_keys(['spark_local_dag']) retrieved from /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:05:53.892+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:05:53.891+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-03-21T18:05:53.979+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:05:53.977+0000] {dag.py:3444} INFO - Setting next_dagrun for spark_local_dag to None, run_after=None
+[2023-03-21T18:05:54.026+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_spark_local.py took 0.361 seconds
+[2023-03-21T18:06:24.291+0000] {processor.py:153} INFO - Started process (PID=533) to work on /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:06:24.298+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_spark_local.py for tasks to queue
+[2023-03-21T18:06:24.300+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:06:24.300+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:06:24.518+0000] {processor.py:753} INFO - DAG(s) dict_keys(['spark_local_dag']) retrieved from /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:06:24.632+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:06:24.632+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-03-21T18:06:24.747+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:06:24.746+0000] {dag.py:3444} INFO - Setting next_dagrun for spark_local_dag to None, run_after=None
+[2023-03-21T18:06:24.821+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_spark_local.py took 0.545 seconds
+[2023-03-21T18:06:55.295+0000] {processor.py:153} INFO - Started process (PID=588) to work on /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:06:55.299+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_spark_local.py for tasks to queue
+[2023-03-21T18:06:55.302+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:06:55.302+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:06:55.472+0000] {processor.py:753} INFO - DAG(s) dict_keys(['spark_local_dag']) retrieved from /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:06:55.521+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:06:55.520+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-03-21T18:06:55.579+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:06:55.578+0000] {dag.py:3444} INFO - Setting next_dagrun for spark_local_dag to None, run_after=None
+[2023-03-21T18:06:55.618+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_spark_local.py took 0.342 seconds
+[2023-03-21T18:07:25.852+0000] {processor.py:153} INFO - Started process (PID=643) to work on /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:07:25.857+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_spark_local.py for tasks to queue
+[2023-03-21T18:07:25.859+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:07:25.859+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:07:26.391+0000] {processor.py:753} INFO - DAG(s) dict_keys(['spark_local_dag']) retrieved from /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:07:26.494+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:07:26.494+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-03-21T18:07:26.648+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:07:26.648+0000] {dag.py:3444} INFO - Setting next_dagrun for spark_local_dag to None, run_after=None
+[2023-03-21T18:07:26.704+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_spark_local.py took 0.875 seconds
+[2023-03-21T18:07:57.083+0000] {processor.py:153} INFO - Started process (PID=689) to work on /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:07:57.085+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_spark_local.py for tasks to queue
+[2023-03-21T18:07:57.086+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:07:57.086+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:07:57.236+0000] {processor.py:753} INFO - DAG(s) dict_keys(['spark_local_dag']) retrieved from /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:07:57.284+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:07:57.284+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-03-21T18:07:57.342+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:07:57.341+0000] {dag.py:3444} INFO - Setting next_dagrun for spark_local_dag to None, run_after=None
+[2023-03-21T18:07:57.380+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_spark_local.py took 0.305 seconds
+[2023-03-21T18:08:27.597+0000] {processor.py:153} INFO - Started process (PID=745) to work on /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:08:27.607+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_spark_local.py for tasks to queue
+[2023-03-21T18:08:27.609+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:08:27.609+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:08:27.916+0000] {processor.py:753} INFO - DAG(s) dict_keys(['spark_local_dag']) retrieved from /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:08:28.043+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:08:28.043+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-03-21T18:08:28.172+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:08:28.171+0000] {dag.py:3444} INFO - Setting next_dagrun for spark_local_dag to None, run_after=None
+[2023-03-21T18:08:28.229+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_spark_local.py took 0.648 seconds
+[2023-03-21T18:08:58.719+0000] {processor.py:153} INFO - Started process (PID=799) to work on /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:08:58.732+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_spark_local.py for tasks to queue
+[2023-03-21T18:08:58.758+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:08:58.733+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:08:59.230+0000] {processor.py:753} INFO - DAG(s) dict_keys(['spark_local_dag']) retrieved from /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:08:59.322+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:08:59.322+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-03-21T18:08:59.439+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:08:59.439+0000] {dag.py:3444} INFO - Setting next_dagrun for spark_local_dag to None, run_after=None
+[2023-03-21T18:08:59.519+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_spark_local.py took 0.831 seconds
+[2023-03-21T18:09:29.820+0000] {processor.py:153} INFO - Started process (PID=855) to work on /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:09:29.822+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_spark_local.py for tasks to queue
+[2023-03-21T18:09:29.824+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:09:29.823+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:09:30.051+0000] {processor.py:753} INFO - DAG(s) dict_keys(['spark_local_dag']) retrieved from /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:09:30.113+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:09:30.112+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-03-21T18:09:30.170+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:09:30.170+0000] {dag.py:3444} INFO - Setting next_dagrun for spark_local_dag to None, run_after=None
+[2023-03-21T18:09:30.208+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_spark_local.py took 0.413 seconds
+[2023-03-21T18:10:00.960+0000] {processor.py:153} INFO - Started process (PID=912) to work on /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:10:00.963+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_spark_local.py for tasks to queue
+[2023-03-21T18:10:00.964+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:10:00.964+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:10:01.111+0000] {processor.py:753} INFO - DAG(s) dict_keys(['spark_local_dag']) retrieved from /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:10:01.159+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:10:01.159+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-03-21T18:10:01.240+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:10:01.240+0000] {dag.py:3444} INFO - Setting next_dagrun for spark_local_dag to None, run_after=None
+[2023-03-21T18:10:01.291+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_spark_local.py took 0.346 seconds
+[2023-03-21T18:10:31.543+0000] {processor.py:153} INFO - Started process (PID=967) to work on /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:10:31.546+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_spark_local.py for tasks to queue
+[2023-03-21T18:10:31.548+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:10:31.547+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:10:31.693+0000] {processor.py:753} INFO - DAG(s) dict_keys(['spark_local_dag']) retrieved from /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:10:31.738+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:10:31.738+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-03-21T18:10:31.802+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:10:31.802+0000] {dag.py:3444} INFO - Setting next_dagrun for spark_local_dag to None, run_after=None
+[2023-03-21T18:10:31.838+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_spark_local.py took 0.302 seconds
+[2023-03-21T18:11:02.212+0000] {processor.py:153} INFO - Started process (PID=1021) to work on /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:11:02.218+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_spark_local.py for tasks to queue
+[2023-03-21T18:11:02.219+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:11:02.219+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:11:02.545+0000] {processor.py:753} INFO - DAG(s) dict_keys(['spark_local_dag']) retrieved from /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:11:02.631+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:11:02.630+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-03-21T18:11:02.762+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:11:02.761+0000] {dag.py:3444} INFO - Setting next_dagrun for spark_local_dag to None, run_after=None
+[2023-03-21T18:11:02.902+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_spark_local.py took 0.776 seconds
+[2023-03-21T18:11:33.119+0000] {processor.py:153} INFO - Started process (PID=1069) to work on /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:11:33.125+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_spark_local.py for tasks to queue
+[2023-03-21T18:11:33.127+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:11:33.127+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:11:33.285+0000] {processor.py:753} INFO - DAG(s) dict_keys(['spark_local_dag']) retrieved from /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:11:33.339+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:11:33.338+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-03-21T18:11:33.406+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:11:33.405+0000] {dag.py:3444} INFO - Setting next_dagrun for spark_local_dag to None, run_after=None
+[2023-03-21T18:11:33.540+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_spark_local.py took 0.440 seconds
+[2023-03-21T18:12:03.625+0000] {processor.py:153} INFO - Started process (PID=1125) to work on /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:12:03.628+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_spark_local.py for tasks to queue
+[2023-03-21T18:12:03.629+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:12:03.629+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:12:03.775+0000] {processor.py:753} INFO - DAG(s) dict_keys(['spark_local_dag']) retrieved from /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:12:03.846+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:12:03.846+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-03-21T18:12:03.942+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:12:03.942+0000] {dag.py:3444} INFO - Setting next_dagrun for spark_local_dag to None, run_after=None
+[2023-03-21T18:12:04.053+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_spark_local.py took 0.435 seconds
+[2023-03-21T18:12:34.745+0000] {processor.py:153} INFO - Started process (PID=1182) to work on /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:12:34.748+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_spark_local.py for tasks to queue
+[2023-03-21T18:12:34.750+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:12:34.750+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:12:35.093+0000] {processor.py:753} INFO - DAG(s) dict_keys(['spark_local_dag']) retrieved from /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:12:35.146+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:12:35.146+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-03-21T18:12:35.206+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:12:35.206+0000] {dag.py:3444} INFO - Setting next_dagrun for spark_local_dag to None, run_after=None
+[2023-03-21T18:12:35.240+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_spark_local.py took 0.510 seconds
+[2023-03-21T18:13:06.138+0000] {processor.py:153} INFO - Started process (PID=1239) to work on /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:13:06.146+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_spark_local.py for tasks to queue
+[2023-03-21T18:13:06.148+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:13:06.148+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:13:06.520+0000] {processor.py:753} INFO - DAG(s) dict_keys(['spark_local_dag']) retrieved from /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:13:06.572+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:13:06.572+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-03-21T18:13:06.636+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:13:06.636+0000] {dag.py:3444} INFO - Setting next_dagrun for spark_local_dag to None, run_after=None
+[2023-03-21T18:13:06.682+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_spark_local.py took 0.554 seconds
+[2023-03-21T18:13:37.084+0000] {processor.py:153} INFO - Started process (PID=1285) to work on /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:13:37.126+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_spark_local.py for tasks to queue
+[2023-03-21T18:13:37.128+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:13:37.128+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:13:37.813+0000] {processor.py:753} INFO - DAG(s) dict_keys(['spark_local_dag']) retrieved from /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:13:37.988+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:13:37.986+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-03-21T18:13:38.179+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:13:38.179+0000] {dag.py:3444} INFO - Setting next_dagrun for spark_local_dag to None, run_after=None
+[2023-03-21T18:13:38.303+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_spark_local.py took 1.271 seconds
+[2023-03-21T18:14:08.882+0000] {processor.py:153} INFO - Started process (PID=1342) to work on /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:14:08.892+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_spark_local.py for tasks to queue
+[2023-03-21T18:14:08.895+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:14:08.895+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:14:09.299+0000] {processor.py:753} INFO - DAG(s) dict_keys(['spark_local_dag']) retrieved from /opt/airflow/dags/p_spark_local.py
+[2023-03-21T18:14:09.411+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:14:09.410+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-03-21T18:14:09.561+0000] {logging_mixin.py:137} INFO - [2023-03-21T18:14:09.561+0000] {dag.py:3444} INFO - Setting next_dagrun for spark_local_dag to None, run_after=None
+[2023-03-21T18:14:09.671+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_spark_local.py took 0.797 seconds
