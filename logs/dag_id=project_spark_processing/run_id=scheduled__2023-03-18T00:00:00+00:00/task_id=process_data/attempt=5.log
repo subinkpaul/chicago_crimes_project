@@ -1,0 +1,61 @@
+[2023-03-19T21:04:16.506+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: project_spark_processing.process_data scheduled__2023-03-18T00:00:00+00:00 [queued]>
+[2023-03-19T21:04:16.538+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: project_spark_processing.process_data scheduled__2023-03-18T00:00:00+00:00 [queued]>
+[2023-03-19T21:04:16.539+0000] {taskinstance.py:1282} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-19T21:04:16.540+0000] {taskinstance.py:1283} INFO - Starting attempt 5 of 6
+[2023-03-19T21:04:16.540+0000] {taskinstance.py:1284} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-19T21:04:16.592+0000] {taskinstance.py:1303} INFO - Executing <Task(DataprocSubmitJobOperator): process_data> on 2023-03-18 00:00:00+00:00
+[2023-03-19T21:04:16.610+0000] {standard_task_runner.py:55} INFO - Started process 17491 to run task
+[2023-03-19T21:04:16.608+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'project_spark_processing', 'process_data', 'scheduled__2023-03-18T00:00:00+00:00', '--job-id', '149', '--raw', '--subdir', 'DAGS_FOLDER/p_submit_job_draft.py', '--cfg-path', '/tmp/tmpm7klqyln']
+[2023-03-19T21:04:16.646+0000] {standard_task_runner.py:83} INFO - Job 149: Subtask process_data
+[2023-03-19T21:04:16.703+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:250: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2023-03-19T21:04:16.784+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-03-19T21:04:16.868+0000] {task_command.py:388} INFO - Running <TaskInstance: project_spark_processing.process_data scheduled__2023-03-18T00:00:00+00:00 [running]> on host 50ce40c43c89
+[2023-03-19T21:04:17.097+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=project_spark_processing
+AIRFLOW_CTX_TASK_ID=process_data
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-18T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=5
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-18T00:00:00+00:00
+[2023-03-19T21:04:17.099+0000] {dataproc.py:1985} INFO - Submitting job
+[2023-03-19T21:04:17.103+0000] {crypto.py:83} WARNING - empty cryptography key - values will not be stored encrypted.
+[2023-03-19T21:04:17.110+0000] {base.py:73} INFO - Using connection ID 'google_cloud_default' for task execution.
+[2023-03-19T21:04:17.498+0000] {dataproc.py:1997} INFO - Job your_job_id submitted successfully.
+[2023-03-19T21:04:17.547+0000] {dataproc.py:2017} INFO - Waiting for job your_job_id to complete
+[2023-03-19T21:10:47.927+0000] {local_task_job.py:277} WARNING - State of this instance has been externally set to restarting. Terminating instance.
+[2023-03-19T21:10:47.930+0000] {process_utils.py:133} INFO - Sending Signals.SIGTERM to group 17491. PIDs of all processes in the group: [17491]
+[2023-03-19T21:10:47.931+0000] {process_utils.py:84} INFO - Sending the signal Signals.SIGTERM to group 17491
+[2023-03-19T21:10:47.931+0000] {taskinstance.py:1482} ERROR - Received SIGTERM. Terminating subprocesses.
+[2023-03-19T21:10:48.084+0000] {taskinstance.py:1775} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1523, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1588, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/cloud/operators/dataproc.py", line 2019, in execute
+    job_id=new_job_id, region=self.region, project_id=self.project_id, timeout=self.wait_timeout
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/common/hooks/base_google.py", line 468, in inner_wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/cloud/hooks/dataproc.py", line 715, in wait_for_job
+    time.sleep(wait_time)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1483, in signal_handler
+    raise AirflowTermSignal("Task received SIGTERM signal")
+airflow.exceptions.AirflowTermSignal: Task received SIGTERM signal
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1377, in _run_raw_task
+    self._execute_task_with_callbacks(context, test_mode)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1530, in _execute_task_with_callbacks
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2023-03-19T21:10:48.093+0000] {taskinstance.py:1326} INFO - Marking task as UP_FOR_RETRY. dag_id=project_spark_processing, task_id=process_data, execution_date=20230318T000000, start_date=20230319T210416, end_date=20230319T211048
+[2023-03-19T21:10:48.114+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 149 for task process_data (Task received SIGTERM signal; 17491)
+[2023-03-19T21:10:48.145+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=17491, status='terminated', exitcode=1, started='21:04:16') (17491) terminated with exit code 1

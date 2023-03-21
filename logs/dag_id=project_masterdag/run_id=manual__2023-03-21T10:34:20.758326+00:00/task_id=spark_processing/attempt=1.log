@@ -1,0 +1,143 @@
+[2023-03-21T10:37:34.826+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: project_masterdag.spark_processing manual__2023-03-21T10:34:20.758326+00:00 [queued]>
+[2023-03-21T10:37:34.867+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: project_masterdag.spark_processing manual__2023-03-21T10:34:20.758326+00:00 [queued]>
+[2023-03-21T10:37:34.868+0000] {taskinstance.py:1282} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-21T10:37:34.869+0000] {taskinstance.py:1283} INFO - Starting attempt 1 of 2
+[2023-03-21T10:37:34.869+0000] {taskinstance.py:1284} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-21T10:37:34.912+0000] {taskinstance.py:1303} INFO - Executing <Task(DataprocSubmitJobOperator): spark_processing> on 2023-03-21 10:34:20.758326+00:00
+[2023-03-21T10:37:34.934+0000] {standard_task_runner.py:55} INFO - Started process 30063 to run task
+[2023-03-21T10:37:34.958+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'project_masterdag', 'spark_processing', 'manual__2023-03-21T10:34:20.758326+00:00', '--job-id', '293', '--raw', '--subdir', 'DAGS_FOLDER/project_master_dags.py', '--cfg-path', '/tmp/tmp1uzxh8tz']
+[2023-03-21T10:37:34.963+0000] {standard_task_runner.py:83} INFO - Job 293: Subtask spark_processing
+[2023-03-21T10:37:34.994+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:250: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2023-03-21T10:37:35.187+0000] {task_command.py:388} INFO - Running <TaskInstance: project_masterdag.spark_processing manual__2023-03-21T10:34:20.758326+00:00 [running]> on host 796cac132c25
+[2023-03-21T10:37:35.464+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=project_masterdag
+AIRFLOW_CTX_TASK_ID=spark_processing
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-21T10:34:20.758326+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-03-21T10:34:20.758326+00:00
+[2023-03-21T10:37:35.467+0000] {dataproc.py:1985} INFO - Submitting job
+[2023-03-21T10:37:35.469+0000] {base.py:73} INFO - Using connection ID 'google_cloud_default' for task execution.
+[2023-03-21T10:37:35.847+0000] {dataproc.py:1997} INFO - Job transform_bq_data12 submitted successfully.
+[2023-03-21T10:37:35.903+0000] {dataproc.py:2017} INFO - Waiting for job transform_bq_data12 to complete
+[2023-03-21T10:38:16.315+0000] {taskinstance.py:1775} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/cloud/operators/dataproc.py", line 2019, in execute
+    job_id=new_job_id, region=self.region, project_id=self.project_id, timeout=self.wait_timeout
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/common/hooks/base_google.py", line 468, in inner_wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/cloud/hooks/dataproc.py", line 723, in wait_for_job
+    raise AirflowException(f"Job failed:\n{job}")
+airflow.exceptions.AirflowException: Job failed:
+reference {
+  project_id: "dtc-de-course-375420"
+  job_id: "transform_bq_data12"
+}
+placement {
+  cluster_name: "my-dataproc-cluster"
+  cluster_uuid: "de849a28-0188-4aa7-9580-615737fb681f"
+}
+pyspark_job {
+  main_python_file_uri: "gs://dtc_data_lake_dtc-de-course-375420/spark_job.py"
+  args: "--input_table"
+  args: "dtc-de-course-375420.chicago_crime_all.et_chicago_crimes"
+  args: "--output_table_crime"
+  args: "chicago_crime_all.CRIME_TYPE_COUNT"
+  args: "--output_table_daily"
+  args: "chicago_crime_all.CRIMES_DAILY"
+  jar_file_uris: "gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.29.0.jar"
+}
+status {
+  state: ERROR
+  details: "Google Cloud Dataproc Agent reports job failure. If logs are available, they can be found at:\nhttps://console.cloud.google.com/dataproc/jobs/transform_bq_data12?project=dtc-de-course-375420&region=europe-west6\ngcloud dataproc jobs wait \'transform_bq_data12\' --region \'europe-west6\' --project \'dtc-de-course-375420\'\nhttps://console.cloud.google.com/storage/browser/dataproc-staging-europe-west6-192108012555-yegdrxcc/google-cloud-dataproc-metainfo/de849a28-0188-4aa7-9580-615737fb681f/jobs/transform_bq_data12/\ngs://dataproc-staging-europe-west6-192108012555-yegdrxcc/google-cloud-dataproc-metainfo/de849a28-0188-4aa7-9580-615737fb681f/jobs/transform_bq_data12/driveroutput"
+  state_start_time {
+    seconds: 1679395087
+    nanos: 609894000
+  }
+}
+status_history {
+  state: PENDING
+  state_start_time {
+    seconds: 1679395055
+    nanos: 828523000
+  }
+}
+status_history {
+  state: SETUP_DONE
+  state_start_time {
+    seconds: 1679395055
+    nanos: 870678000
+  }
+}
+status_history {
+  state: RUNNING
+  state_start_time {
+    seconds: 1679395056
+    nanos: 228287000
+  }
+}
+driver_control_files_uri: "gs://dataproc-staging-europe-west6-192108012555-yegdrxcc/google-cloud-dataproc-metainfo/de849a28-0188-4aa7-9580-615737fb681f/jobs/transform_bq_data12/"
+driver_output_resource_uri: "gs://dataproc-staging-europe-west6-192108012555-yegdrxcc/google-cloud-dataproc-metainfo/de849a28-0188-4aa7-9580-615737fb681f/jobs/transform_bq_data12/driveroutput"
+job_uuid: "f5cdca32-ba45-42c5-8909-79509cd43fbb"
+done: true
+
+[2023-03-21T10:38:16.337+0000] {taskinstance.py:1326} INFO - Marking task as UP_FOR_RETRY. dag_id=project_masterdag, task_id=spark_processing, execution_date=20230321T103420, start_date=20230321T103734, end_date=20230321T103816
+[2023-03-21T10:38:16.379+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 293 for task spark_processing (Job failed:
+reference {
+  project_id: "dtc-de-course-375420"
+  job_id: "transform_bq_data12"
+}
+placement {
+  cluster_name: "my-dataproc-cluster"
+  cluster_uuid: "de849a28-0188-4aa7-9580-615737fb681f"
+}
+pyspark_job {
+  main_python_file_uri: "gs://dtc_data_lake_dtc-de-course-375420/spark_job.py"
+  args: "--input_table"
+  args: "dtc-de-course-375420.chicago_crime_all.et_chicago_crimes"
+  args: "--output_table_crime"
+  args: "chicago_crime_all.CRIME_TYPE_COUNT"
+  args: "--output_table_daily"
+  args: "chicago_crime_all.CRIMES_DAILY"
+  jar_file_uris: "gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.29.0.jar"
+}
+status {
+  state: ERROR
+  details: "Google Cloud Dataproc Agent reports job failure. If logs are available, they can be found at:\nhttps://console.cloud.google.com/dataproc/jobs/transform_bq_data12?project=dtc-de-course-375420&region=europe-west6\ngcloud dataproc jobs wait \'transform_bq_data12\' --region \'europe-west6\' --project \'dtc-de-course-375420\'\nhttps://console.cloud.google.com/storage/browser/dataproc-staging-europe-west6-192108012555-yegdrxcc/google-cloud-dataproc-metainfo/de849a28-0188-4aa7-9580-615737fb681f/jobs/transform_bq_data12/\ngs://dataproc-staging-europe-west6-192108012555-yegdrxcc/google-cloud-dataproc-metainfo/de849a28-0188-4aa7-9580-615737fb681f/jobs/transform_bq_data12/driveroutput"
+  state_start_time {
+    seconds: 1679395087
+    nanos: 609894000
+  }
+}
+status_history {
+  state: PENDING
+  state_start_time {
+    seconds: 1679395055
+    nanos: 828523000
+  }
+}
+status_history {
+  state: SETUP_DONE
+  state_start_time {
+    seconds: 1679395055
+    nanos: 870678000
+  }
+}
+status_history {
+  state: RUNNING
+  state_start_time {
+    seconds: 1679395056
+    nanos: 228287000
+  }
+}
+driver_control_files_uri: "gs://dataproc-staging-europe-west6-192108012555-yegdrxcc/google-cloud-dataproc-metainfo/de849a28-0188-4aa7-9580-615737fb681f/jobs/transform_bq_data12/"
+driver_output_resource_uri: "gs://dataproc-staging-europe-west6-192108012555-yegdrxcc/google-cloud-dataproc-metainfo/de849a28-0188-4aa7-9580-615737fb681f/jobs/transform_bq_data12/driveroutput"
+job_uuid: "f5cdca32-ba45-42c5-8909-79509cd43fbb"
+done: true
+; 30063)
+[2023-03-21T10:38:16.446+0000] {local_task_job.py:212} INFO - Task exited with return code 1
+[2023-03-21T10:38:16.506+0000] {taskinstance.py:2585} INFO - 0 downstream tasks scheduled from follow-on schedule check

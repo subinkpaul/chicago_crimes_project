@@ -1,0 +1,41 @@
+[2023-03-16T09:50:31.775+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: load_csv_to_bq.load_csv_to_bq scheduled__2023-03-15T00:00:00+00:00 [queued]>
+[2023-03-16T09:50:31.789+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: load_csv_to_bq.load_csv_to_bq scheduled__2023-03-15T00:00:00+00:00 [queued]>
+[2023-03-16T09:50:31.790+0000] {taskinstance.py:1282} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-16T09:50:31.790+0000] {taskinstance.py:1283} INFO - Starting attempt 2 of 2
+[2023-03-16T09:50:31.790+0000] {taskinstance.py:1284} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-16T09:50:31.813+0000] {taskinstance.py:1303} INFO - Executing <Task(PythonOperator): load_csv_to_bq> on 2023-03-15 00:00:00+00:00
+[2023-03-16T09:50:31.820+0000] {standard_task_runner.py:55} INFO - Started process 527 to run task
+[2023-03-16T09:50:31.825+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'load_csv_to_bq', 'load_csv_to_bq', 'scheduled__2023-03-15T00:00:00+00:00', '--job-id', '45', '--raw', '--subdir', 'DAGS_FOLDER/p_gcs_to_bq copy.py', '--cfg-path', '/tmp/tmp35l2t62r']
+[2023-03-16T09:50:31.828+0000] {standard_task_runner.py:83} INFO - Job 45: Subtask load_csv_to_bq
+[2023-03-16T09:50:31.849+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:250: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2023-03-16T09:50:31.890+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-03-16T09:50:31.937+0000] {task_command.py:388} INFO - Running <TaskInstance: load_csv_to_bq.load_csv_to_bq scheduled__2023-03-15T00:00:00+00:00 [running]> on host 8d6d3f05a6c2
+[2023-03-16T09:50:32.044+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=load_csv_to_bq
+AIRFLOW_CTX_TASK_ID=load_csv_to_bq
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-15T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-15T00:00:00+00:00
+[2023-03-16T09:50:32.047+0000] {crypto.py:83} WARNING - empty cryptography key - values will not be stored encrypted.
+[2023-03-16T09:50:32.047+0000] {base.py:73} INFO - Using connection ID 'google_cloud_default' for task execution.
+[2023-03-16T09:50:32.048+0000] {base.py:73} INFO - Using connection ID 'google_cloud_default' for task execution.
+[2023-03-16T09:50:32.207+0000] {taskinstance.py:1775} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/p_gcs_to_bq copy.py", line 64, in load_csv_to_bq
+    bq_hook.insert_rows_from_files(table, source_uris, schema=schema, write_disposition=write_disposition)
+AttributeError: 'BigQueryHook' object has no attribute 'insert_rows_from_files'
+[2023-03-16T09:50:32.220+0000] {taskinstance.py:1326} INFO - Marking task as FAILED. dag_id=load_csv_to_bq, task_id=load_csv_to_bq, execution_date=20230315T000000, start_date=20230316T095031, end_date=20230316T095032
+[2023-03-16T09:50:32.238+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 45 for task load_csv_to_bq ('BigQueryHook' object has no attribute 'insert_rows_from_files'; 527)
+[2023-03-16T09:50:32.277+0000] {local_task_job.py:212} INFO - Task exited with return code 1
+[2023-03-16T09:50:32.305+0000] {taskinstance.py:2585} INFO - 0 downstream tasks scheduled from follow-on schedule check

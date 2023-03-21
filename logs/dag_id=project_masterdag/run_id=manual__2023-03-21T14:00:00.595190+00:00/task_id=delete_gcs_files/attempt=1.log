@@ -1,0 +1,30 @@
+[2023-03-21T14:08:29.427+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: project_masterdag.delete_gcs_files manual__2023-03-21T14:00:00.595190+00:00 [queued]>
+[2023-03-21T14:08:29.458+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: project_masterdag.delete_gcs_files manual__2023-03-21T14:00:00.595190+00:00 [queued]>
+[2023-03-21T14:08:29.459+0000] {taskinstance.py:1282} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-21T14:08:29.459+0000] {taskinstance.py:1283} INFO - Starting attempt 1 of 2
+[2023-03-21T14:08:29.459+0000] {taskinstance.py:1284} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-21T14:08:29.504+0000] {taskinstance.py:1303} INFO - Executing <Task(GCSDeleteObjectsOperator): delete_gcs_files> on 2023-03-21 14:00:00.595190+00:00
+[2023-03-21T14:08:29.518+0000] {standard_task_runner.py:55} INFO - Started process 39727 to run task
+[2023-03-21T14:08:29.534+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'project_masterdag', 'delete_gcs_files', 'manual__2023-03-21T14:00:00.595190+00:00', '--job-id', '346', '--raw', '--subdir', 'DAGS_FOLDER/project_master_dags.py', '--cfg-path', '/tmp/tmp_y5347q1']
+[2023-03-21T14:08:29.545+0000] {standard_task_runner.py:83} INFO - Job 346: Subtask delete_gcs_files
+[2023-03-21T14:08:29.582+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:250: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2023-03-21T14:08:29.737+0000] {task_command.py:388} INFO - Running <TaskInstance: project_masterdag.delete_gcs_files manual__2023-03-21T14:00:00.595190+00:00 [running]> on host 796cac132c25
+[2023-03-21T14:08:29.959+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=project_masterdag
+AIRFLOW_CTX_TASK_ID=delete_gcs_files
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-21T14:00:00.595190+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-03-21T14:00:00.595190+00:00
+[2023-03-21T14:08:29.963+0000] {base.py:73} INFO - Using connection ID 'google_cloud_default' for task execution.
+[2023-03-21T14:08:30.219+0000] {gcs.py:342} INFO - Deleting 3 objects from dtc_data_lake_dtc-de-course-375420
+[2023-03-21T14:08:30.250+0000] {gcs.py:679} INFO - Blob project/Chicago_Crimes_2001.csv deleted.
+[2023-03-21T14:08:30.277+0000] {gcs.py:679} INFO - Blob project/Chicago_Crimes_2002.csv deleted.
+[2023-03-21T14:08:30.302+0000] {gcs.py:679} INFO - Blob project/Chicago_Crimes_2015.csv deleted.
+[2023-03-21T14:08:30.327+0000] {taskinstance.py:1326} INFO - Marking task as SUCCESS. dag_id=project_masterdag, task_id=delete_gcs_files, execution_date=20230321T140000, start_date=20230321T140829, end_date=20230321T140830
+[2023-03-21T14:08:30.384+0000] {local_task_job.py:212} INFO - Task exited with return code 0
+[2023-03-21T14:08:30.447+0000] {taskinstance.py:2585} INFO - 0 downstream tasks scheduled from follow-on schedule check

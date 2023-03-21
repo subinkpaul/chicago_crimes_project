@@ -1,0 +1,137 @@
+[2023-03-19T21:16:59.170+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: project_spark_processing.process_data scheduled__2023-03-18T00:00:00+00:00 [queued]>
+[2023-03-19T21:16:59.188+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: project_spark_processing.process_data scheduled__2023-03-18T00:00:00+00:00 [queued]>
+[2023-03-19T21:16:59.189+0000] {taskinstance.py:1282} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-19T21:16:59.190+0000] {taskinstance.py:1283} INFO - Starting attempt 7 of 7
+[2023-03-19T21:16:59.190+0000] {taskinstance.py:1284} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-19T21:16:59.223+0000] {taskinstance.py:1303} INFO - Executing <Task(DataprocSubmitJobOperator): process_data> on 2023-03-18 00:00:00+00:00
+[2023-03-19T21:16:59.232+0000] {standard_task_runner.py:55} INFO - Started process 18327 to run task
+[2023-03-19T21:16:59.244+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'project_spark_processing', 'process_data', 'scheduled__2023-03-18T00:00:00+00:00', '--job-id', '152', '--raw', '--subdir', 'DAGS_FOLDER/p_submit_job_draft.py', '--cfg-path', '/tmp/tmppn9885ex']
+[2023-03-19T21:16:59.248+0000] {standard_task_runner.py:83} INFO - Job 152: Subtask process_data
+[2023-03-19T21:16:59.276+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:250: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2023-03-19T21:16:59.319+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-03-19T21:16:59.381+0000] {task_command.py:388} INFO - Running <TaskInstance: project_spark_processing.process_data scheduled__2023-03-18T00:00:00+00:00 [running]> on host 50ce40c43c89
+[2023-03-19T21:16:59.556+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=project_spark_processing
+AIRFLOW_CTX_TASK_ID=process_data
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-18T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=7
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-18T00:00:00+00:00
+[2023-03-19T21:16:59.558+0000] {dataproc.py:1985} INFO - Submitting job
+[2023-03-19T21:16:59.560+0000] {crypto.py:83} WARNING - empty cryptography key - values will not be stored encrypted.
+[2023-03-19T21:16:59.561+0000] {base.py:73} INFO - Using connection ID 'google_cloud_default' for task execution.
+[2023-03-19T21:16:59.794+0000] {dataproc.py:1997} INFO - Job your_job_id submitted successfully.
+[2023-03-19T21:16:59.824+0000] {dataproc.py:2017} INFO - Waiting for job your_job_id to complete
+[2023-03-19T21:17:40.182+0000] {taskinstance.py:1775} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/cloud/operators/dataproc.py", line 2019, in execute
+    job_id=new_job_id, region=self.region, project_id=self.project_id, timeout=self.wait_timeout
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/common/hooks/base_google.py", line 468, in inner_wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/cloud/hooks/dataproc.py", line 723, in wait_for_job
+    raise AirflowException(f"Job failed:\n{job}")
+airflow.exceptions.AirflowException: Job failed:
+reference {
+  project_id: "dtc-de-course-375420"
+  job_id: "your_job_id"
+}
+placement {
+  cluster_name: "my-dataproc-cluster"
+  cluster_uuid: "245a5280-f4b3-49c8-a701-e9c7026df1c0"
+}
+pyspark_job {
+  main_python_file_uri: "gs://dtc_data_lake_dtc-de-course-375420/spark_job.py"
+  args: "--input_table"
+  args: "dtc-de-course-375420.chicago_crime_all.et_chicago_crimes"
+}
+status {
+  state: ERROR
+  details: "Job failed with message [TabError: inconsistent use of tabs and spaces in indentation]. Additional details can be found at:\nhttps://console.cloud.google.com/dataproc/jobs/your_job_id?project=dtc-de-course-375420&region=europe-west6\ngcloud dataproc jobs wait \'your_job_id\' --region \'europe-west6\' --project \'dtc-de-course-375420\'\nhttps://console.cloud.google.com/storage/browser/dataproc-staging-europe-west6-192108012555-yegdrxcc/google-cloud-dataproc-metainfo/245a5280-f4b3-49c8-a701-e9c7026df1c0/jobs/your_job_id/\ngs://dataproc-staging-europe-west6-192108012555-yegdrxcc/google-cloud-dataproc-metainfo/245a5280-f4b3-49c8-a701-e9c7026df1c0/jobs/your_job_id/driveroutput"
+  state_start_time {
+    seconds: 1679260654
+    nanos: 394539000
+  }
+}
+status_history {
+  state: PENDING
+  state_start_time {
+    seconds: 1679260619
+    nanos: 780278000
+  }
+}
+status_history {
+  state: SETUP_DONE
+  state_start_time {
+    seconds: 1679260619
+    nanos: 837203000
+  }
+}
+status_history {
+  state: RUNNING
+  state_start_time {
+    seconds: 1679260620
+    nanos: 344749000
+  }
+}
+driver_control_files_uri: "gs://dataproc-staging-europe-west6-192108012555-yegdrxcc/google-cloud-dataproc-metainfo/245a5280-f4b3-49c8-a701-e9c7026df1c0/jobs/your_job_id/"
+driver_output_resource_uri: "gs://dataproc-staging-europe-west6-192108012555-yegdrxcc/google-cloud-dataproc-metainfo/245a5280-f4b3-49c8-a701-e9c7026df1c0/jobs/your_job_id/driveroutput"
+job_uuid: "2ff4c1a8-6391-4661-a6c6-e39292b837d9"
+done: true
+
+[2023-03-19T21:17:40.200+0000] {taskinstance.py:1326} INFO - Marking task as FAILED. dag_id=project_spark_processing, task_id=process_data, execution_date=20230318T000000, start_date=20230319T211659, end_date=20230319T211740
+[2023-03-19T21:17:40.245+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 152 for task process_data (Job failed:
+reference {
+  project_id: "dtc-de-course-375420"
+  job_id: "your_job_id"
+}
+placement {
+  cluster_name: "my-dataproc-cluster"
+  cluster_uuid: "245a5280-f4b3-49c8-a701-e9c7026df1c0"
+}
+pyspark_job {
+  main_python_file_uri: "gs://dtc_data_lake_dtc-de-course-375420/spark_job.py"
+  args: "--input_table"
+  args: "dtc-de-course-375420.chicago_crime_all.et_chicago_crimes"
+}
+status {
+  state: ERROR
+  details: "Job failed with message [TabError: inconsistent use of tabs and spaces in indentation]. Additional details can be found at:\nhttps://console.cloud.google.com/dataproc/jobs/your_job_id?project=dtc-de-course-375420&region=europe-west6\ngcloud dataproc jobs wait \'your_job_id\' --region \'europe-west6\' --project \'dtc-de-course-375420\'\nhttps://console.cloud.google.com/storage/browser/dataproc-staging-europe-west6-192108012555-yegdrxcc/google-cloud-dataproc-metainfo/245a5280-f4b3-49c8-a701-e9c7026df1c0/jobs/your_job_id/\ngs://dataproc-staging-europe-west6-192108012555-yegdrxcc/google-cloud-dataproc-metainfo/245a5280-f4b3-49c8-a701-e9c7026df1c0/jobs/your_job_id/driveroutput"
+  state_start_time {
+    seconds: 1679260654
+    nanos: 394539000
+  }
+}
+status_history {
+  state: PENDING
+  state_start_time {
+    seconds: 1679260619
+    nanos: 780278000
+  }
+}
+status_history {
+  state: SETUP_DONE
+  state_start_time {
+    seconds: 1679260619
+    nanos: 837203000
+  }
+}
+status_history {
+  state: RUNNING
+  state_start_time {
+    seconds: 1679260620
+    nanos: 344749000
+  }
+}
+driver_control_files_uri: "gs://dataproc-staging-europe-west6-192108012555-yegdrxcc/google-cloud-dataproc-metainfo/245a5280-f4b3-49c8-a701-e9c7026df1c0/jobs/your_job_id/"
+driver_output_resource_uri: "gs://dataproc-staging-europe-west6-192108012555-yegdrxcc/google-cloud-dataproc-metainfo/245a5280-f4b3-49c8-a701-e9c7026df1c0/jobs/your_job_id/driveroutput"
+job_uuid: "2ff4c1a8-6391-4661-a6c6-e39292b837d9"
+done: true
+; 18327)
+[2023-03-19T21:17:40.298+0000] {local_task_job.py:212} INFO - Task exited with return code 1
+[2023-03-19T21:17:40.345+0000] {taskinstance.py:2585} INFO - 0 downstream tasks scheduled from follow-on schedule check

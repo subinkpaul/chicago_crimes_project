@@ -1,0 +1,32 @@
+[2023-03-19T13:41:35.827+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: transform_bq_data.create_output_table manual__2023-03-19T13:41:19.821677+00:00 [queued]>
+[2023-03-19T13:41:35.862+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: transform_bq_data.create_output_table manual__2023-03-19T13:41:19.821677+00:00 [queued]>
+[2023-03-19T13:41:35.863+0000] {taskinstance.py:1282} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-19T13:41:35.864+0000] {taskinstance.py:1283} INFO - Starting attempt 1 of 2
+[2023-03-19T13:41:35.864+0000] {taskinstance.py:1284} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-19T13:41:35.900+0000] {taskinstance.py:1303} INFO - Executing <Task(BigQueryExecuteQueryOperator): create_output_table> on 2023-03-19 13:41:19.821677+00:00
+[2023-03-19T13:41:35.923+0000] {standard_task_runner.py:55} INFO - Started process 3462 to run task
+[2023-03-19T13:41:35.941+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'transform_bq_data', 'create_output_table', 'manual__2023-03-19T13:41:19.821677+00:00', '--job-id', '138', '--raw', '--subdir', 'DAGS_FOLDER/p_spark_processing.py', '--cfg-path', '/tmp/tmpqv3zfcf9']
+[2023-03-19T13:41:35.957+0000] {standard_task_runner.py:83} INFO - Job 138: Subtask create_output_table
+[2023-03-19T13:41:36.003+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:250: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2023-03-19T13:41:36.628+0000] {task_command.py:388} INFO - Running <TaskInstance: transform_bq_data.create_output_table manual__2023-03-19T13:41:19.821677+00:00 [running]> on host f1b65b8eb897
+[2023-03-19T13:41:37.029+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=transform_bq_data
+AIRFLOW_CTX_TASK_ID=create_output_table
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-19T13:41:19.821677+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-03-19T13:41:19.821677+00:00
+[2023-03-19T13:41:37.032+0000] {bigquery.py:1093} INFO - Executing: CREATE TABLE IF NOT EXISTS dtc-de-course-375420.chicago_crime_all.output_table (date_column DATE, count INTEGER)
+[2023-03-19T13:41:37.038+0000] {crypto.py:83} WARNING - empty cryptography key - values will not be stored encrypted.
+[2023-03-19T13:41:37.040+0000] {base.py:73} INFO - Using connection ID 'google_cloud_default' for task execution.
+[2023-03-19T13:41:37.043+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/providers/google/cloud/hooks/bigquery.py:2055: DeprecationWarning: This method is deprecated. Please use `BigQueryHook.insert_job` method.
+  "This method is deprecated. Please use `BigQueryHook.insert_job` method.", DeprecationWarning
+
+[2023-03-19T13:41:37.276+0000] {bigquery.py:1546} INFO - Inserting job ***_1679233297275503_642d11d87771e28d450ddd6927a22997
+[2023-03-19T13:41:37.900+0000] {taskinstance.py:1326} INFO - Marking task as SUCCESS. dag_id=transform_bq_data, task_id=create_output_table, execution_date=20230319T134119, start_date=20230319T134135, end_date=20230319T134137
+[2023-03-19T13:41:37.953+0000] {local_task_job.py:212} INFO - Task exited with return code 0
+[2023-03-19T13:41:37.981+0000] {taskinstance.py:2585} INFO - 0 downstream tasks scheduled from follow-on schedule check

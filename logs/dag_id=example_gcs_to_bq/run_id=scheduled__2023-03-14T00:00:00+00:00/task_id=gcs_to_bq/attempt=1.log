@@ -1,0 +1,43 @@
+[2023-03-15T19:28:46.458+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: example_gcs_to_bq.gcs_to_bq scheduled__2023-03-14T00:00:00+00:00 [queued]>
+[2023-03-15T19:28:46.496+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: example_gcs_to_bq.gcs_to_bq scheduled__2023-03-14T00:00:00+00:00 [queued]>
+[2023-03-15T19:28:46.497+0000] {taskinstance.py:1282} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-15T19:28:46.497+0000] {taskinstance.py:1283} INFO - Starting attempt 1 of 2
+[2023-03-15T19:28:46.497+0000] {taskinstance.py:1284} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-15T19:28:46.529+0000] {taskinstance.py:1303} INFO - Executing <Task(GCSToBigQueryOperator): gcs_to_bq> on 2023-03-14 00:00:00+00:00
+[2023-03-15T19:28:46.545+0000] {standard_task_runner.py:55} INFO - Started process 4588 to run task
+[2023-03-15T19:28:46.569+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'example_gcs_to_bq', 'gcs_to_bq', 'scheduled__2023-03-14T00:00:00+00:00', '--job-id', '15', '--raw', '--subdir', 'DAGS_FOLDER/p_gcs_to_bq.py', '--cfg-path', '/tmp/tmps2tpuwnt']
+[2023-03-15T19:28:46.582+0000] {standard_task_runner.py:83} INFO - Job 15: Subtask gcs_to_bq
+[2023-03-15T19:28:46.645+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:250: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2023-03-15T19:28:46.770+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-03-15T19:28:46.902+0000] {task_command.py:388} INFO - Running <TaskInstance: example_gcs_to_bq.gcs_to_bq scheduled__2023-03-14T00:00:00+00:00 [running]> on host 8d6d3f05a6c2
+[2023-03-15T19:28:47.185+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=example_gcs_to_bq
+AIRFLOW_CTX_TASK_ID=gcs_to_bq
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-14T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-14T00:00:00+00:00
+[2023-03-15T19:28:47.202+0000] {crypto.py:83} WARNING - empty cryptography key - values will not be stored encrypted.
+[2023-03-15T19:28:47.204+0000] {base.py:73} INFO - Using connection ID 'google_cloud_default' for task execution.
+[2023-03-15T19:28:47.207+0000] {gcs_to_bigquery.py:382} INFO - Using existing BigQuery table for storing data...
+[2023-03-15T19:28:47.290+0000] {gcs_to_bigquery.py:386} INFO - Executing: {'load': {'autodetect': True, 'createDisposition': 'CREATE_IF_NEEDED', 'destinationTable': {'projectId': 'dtc-de-course-375420', 'datasetId': 'chicago_crime_all', 'tableId': 'my_table'}, 'sourceFormat': 'CSV', 'sourceUris': ['gs://dtc_data_lake_dtc-de-course-375420/project/*.csv'], 'writeDisposition': 'WRITE_TRUNCATE', 'ignoreUnknownValues': False, 'schema': {'fields': [{'name': 'name', 'type': 'STRING', 'mode': 'NULLABLE'}, {'name': 'age', 'type': 'INTEGER', 'mode': 'NULLABLE'}, {'name': 'address', 'type': 'STRING', 'mode': 'NULLABLE'}]}, 'skipLeadingRows': None, 'fieldDelimiter': ',', 'quote': None, 'allowQuotedNewlines': False, 'encoding': 'UTF-8'}}
+[2023-03-15T19:28:47.294+0000] {bigquery.py:1546} INFO - Inserting job ***_example_gcs_to_bq_gcs_to_bq_2023_03_14T00_00_00_00_00_845efc7351fe6f2d1d460e87857dfb21
+[2023-03-15T19:28:49.724+0000] {taskinstance.py:1775} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/cloud/transfers/gcs_to_bigquery.py", line 445, in execute
+    job.result(timeout=self.result_timeout, retry=self.result_retry)
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/bigquery/job/base.py", line 728, in result
+    return super(_AsyncJob, self).result(timeout=timeout, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/api_core/future/polling.py", line 137, in result
+    raise self._exception
+google.api_core.exceptions.BadRequest: 400 Error while reading data, error message: Could not parse 'G052547' as INT64 for field age (position 1) starting at location 207  with message 'Unable to parse' File: gs://dtc_data_lake_dtc-de-course-375420/project/Chicago_Crimes_2001.csv
+[2023-03-15T19:28:49.752+0000] {taskinstance.py:1326} INFO - Marking task as UP_FOR_RETRY. dag_id=example_gcs_to_bq, task_id=gcs_to_bq, execution_date=20230314T000000, start_date=20230315T192846, end_date=20230315T192849
+[2023-03-15T19:28:49.784+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 15 for task gcs_to_bq (400 Error while reading data, error message: Could not parse 'G052547' as INT64 for field age (position 1) starting at location 207  with message 'Unable to parse' File: gs://dtc_data_lake_dtc-de-course-375420/project/Chicago_Crimes_2001.csv; 4588)
+[2023-03-15T19:28:49.846+0000] {local_task_job.py:212} INFO - Task exited with return code 1
+[2023-03-15T19:28:49.920+0000] {taskinstance.py:2585} INFO - 0 downstream tasks scheduled from follow-on schedule check

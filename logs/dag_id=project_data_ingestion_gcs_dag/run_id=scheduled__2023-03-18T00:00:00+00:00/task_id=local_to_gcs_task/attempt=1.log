@@ -1,0 +1,75 @@
+[2023-03-19T00:02:13.669+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: project_data_ingestion_gcs_dag.local_to_gcs_task scheduled__2023-03-18T00:00:00+00:00 [queued]>
+[2023-03-19T00:02:13.690+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: project_data_ingestion_gcs_dag.local_to_gcs_task scheduled__2023-03-18T00:00:00+00:00 [queued]>
+[2023-03-19T00:02:13.691+0000] {taskinstance.py:1282} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-19T00:02:13.691+0000] {taskinstance.py:1283} INFO - Starting attempt 1 of 2
+[2023-03-19T00:02:13.691+0000] {taskinstance.py:1284} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-19T00:02:13.725+0000] {taskinstance.py:1303} INFO - Executing <Task(PythonOperator): local_to_gcs_task> on 2023-03-18 00:00:00+00:00
+[2023-03-19T00:02:13.736+0000] {standard_task_runner.py:55} INFO - Started process 8401 to run task
+[2023-03-19T00:02:13.750+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'project_data_ingestion_gcs_dag', 'local_to_gcs_task', 'scheduled__2023-03-18T00:00:00+00:00', '--job-id', '126', '--raw', '--subdir', 'DAGS_FOLDER/p_download_upload.py', '--cfg-path', '/tmp/tmpgj9oihom']
+[2023-03-19T00:02:13.754+0000] {standard_task_runner.py:83} INFO - Job 126: Subtask local_to_gcs_task
+[2023-03-19T00:02:13.781+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:250: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2023-03-19T00:02:13.827+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-03-19T00:02:13.896+0000] {task_command.py:388} INFO - Running <TaskInstance: project_data_ingestion_gcs_dag.local_to_gcs_task scheduled__2023-03-18T00:00:00+00:00 [running]> on host 77a3c8c6225c
+[2023-03-19T00:02:14.073+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=project_data_ingestion_gcs_dag
+AIRFLOW_CTX_TASK_ID=local_to_gcs_task
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-18T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-18T00:00:00+00:00
+[2023-03-19T00:02:14.387+0000] {logging_mixin.py:137} INFO - Bucket name is  <Bucket: dtc_data_lake_dtc-de-course-375420>
+[2023-03-19T00:02:14.388+0000] {p_download_upload.py:66} INFO - Uploading: Chicago_Crimes_2001.csv
+[2023-03-19T00:02:17.793+0000] {p_download_upload.py:71} INFO - Chicago_Crimes_2001.csv uploaded to GCS bucket
+[2023-03-19T00:02:17.794+0000] {p_download_upload.py:66} INFO - Uploading: Chicago_Crimes_2002.csv
+[2023-03-19T00:02:20.708+0000] {p_download_upload.py:71} INFO - Chicago_Crimes_2002.csv uploaded to GCS bucket
+[2023-03-19T00:02:20.709+0000] {p_download_upload.py:66} INFO - Uploading: Chicago_Crimes_2003.csv
+[2023-03-19T00:02:23.498+0000] {p_download_upload.py:71} INFO - Chicago_Crimes_2003.csv uploaded to GCS bucket
+[2023-03-19T00:02:23.499+0000] {p_download_upload.py:66} INFO - Uploading: Chicago_Crimes_2004.csv
+[2023-03-19T00:02:26.300+0000] {p_download_upload.py:71} INFO - Chicago_Crimes_2004.csv uploaded to GCS bucket
+[2023-03-19T00:02:26.301+0000] {p_download_upload.py:66} INFO - Uploading: Chicago_Crimes_2005.csv
+[2023-03-19T00:02:29.028+0000] {p_download_upload.py:71} INFO - Chicago_Crimes_2005.csv uploaded to GCS bucket
+[2023-03-19T00:02:29.029+0000] {p_download_upload.py:66} INFO - Uploading: Chicago_Crimes_2006.csv
+[2023-03-19T00:02:32.017+0000] {p_download_upload.py:71} INFO - Chicago_Crimes_2006.csv uploaded to GCS bucket
+[2023-03-19T00:02:32.018+0000] {p_download_upload.py:66} INFO - Uploading: Chicago_Crimes_2007.csv
+[2023-03-19T00:02:34.949+0000] {p_download_upload.py:71} INFO - Chicago_Crimes_2007.csv uploaded to GCS bucket
+[2023-03-19T00:02:34.950+0000] {p_download_upload.py:66} INFO - Uploading: Chicago_Crimes_2008.csv
+[2023-03-19T00:02:37.555+0000] {p_download_upload.py:71} INFO - Chicago_Crimes_2008.csv uploaded to GCS bucket
+[2023-03-19T00:02:37.556+0000] {p_download_upload.py:66} INFO - Uploading: Chicago_Crimes_2009.csv
+[2023-03-19T00:02:39.853+0000] {p_download_upload.py:71} INFO - Chicago_Crimes_2009.csv uploaded to GCS bucket
+[2023-03-19T00:02:39.854+0000] {p_download_upload.py:66} INFO - Uploading: Chicago_Crimes_2010.csv
+[2023-03-19T00:02:42.224+0000] {p_download_upload.py:71} INFO - Chicago_Crimes_2010.csv uploaded to GCS bucket
+[2023-03-19T00:02:42.225+0000] {p_download_upload.py:66} INFO - Uploading: Chicago_Crimes_2011.csv
+[2023-03-19T00:02:44.896+0000] {p_download_upload.py:71} INFO - Chicago_Crimes_2011.csv uploaded to GCS bucket
+[2023-03-19T00:02:44.896+0000] {p_download_upload.py:66} INFO - Uploading: Chicago_Crimes_2012.csv
+[2023-03-19T00:02:47.778+0000] {p_download_upload.py:71} INFO - Chicago_Crimes_2012.csv uploaded to GCS bucket
+[2023-03-19T00:02:47.779+0000] {p_download_upload.py:66} INFO - Uploading: Chicago_Crimes_2013.csv
+[2023-03-19T00:02:49.780+0000] {p_download_upload.py:71} INFO - Chicago_Crimes_2013.csv uploaded to GCS bucket
+[2023-03-19T00:02:49.780+0000] {p_download_upload.py:66} INFO - Uploading: Chicago_Crimes_2014.csv
+[2023-03-19T00:02:51.641+0000] {p_download_upload.py:71} INFO - Chicago_Crimes_2014.csv uploaded to GCS bucket
+[2023-03-19T00:02:51.642+0000] {p_download_upload.py:66} INFO - Uploading: Chicago_Crimes_2015.csv
+[2023-03-19T00:02:53.142+0000] {p_download_upload.py:71} INFO - Chicago_Crimes_2015.csv uploaded to GCS bucket
+[2023-03-19T00:02:53.142+0000] {p_download_upload.py:66} INFO - Uploading: Chicago_Crimes_2016.csv
+[2023-03-19T00:02:54.830+0000] {p_download_upload.py:71} INFO - Chicago_Crimes_2016.csv uploaded to GCS bucket
+[2023-03-19T00:02:54.830+0000] {p_download_upload.py:66} INFO - Uploading: Chicago_Crimes_2017.csv
+[2023-03-19T00:02:57.005+0000] {p_download_upload.py:71} INFO - Chicago_Crimes_2017.csv uploaded to GCS bucket
+[2023-03-19T00:02:57.006+0000] {p_download_upload.py:66} INFO - Uploading: Chicago_Crimes_2018.csv
+[2023-03-19T00:02:59.065+0000] {p_download_upload.py:71} INFO - Chicago_Crimes_2018.csv uploaded to GCS bucket
+[2023-03-19T00:02:59.066+0000] {p_download_upload.py:66} INFO - Uploading: Chicago_Crimes_2019.csv
+[2023-03-19T00:03:00.868+0000] {p_download_upload.py:71} INFO - Chicago_Crimes_2019.csv uploaded to GCS bucket
+[2023-03-19T00:03:00.869+0000] {p_download_upload.py:66} INFO - Uploading: Chicago_Crimes_2020.csv
+[2023-03-19T00:03:02.383+0000] {p_download_upload.py:71} INFO - Chicago_Crimes_2020.csv uploaded to GCS bucket
+[2023-03-19T00:03:02.384+0000] {p_download_upload.py:66} INFO - Uploading: Chicago_Crimes_2021.csv
+[2023-03-19T00:03:04.431+0000] {p_download_upload.py:71} INFO - Chicago_Crimes_2021.csv uploaded to GCS bucket
+[2023-03-19T00:03:04.432+0000] {p_download_upload.py:66} INFO - Uploading: Chicago_Crimes_2022.csv
+[2023-03-19T00:03:05.781+0000] {p_download_upload.py:71} INFO - Chicago_Crimes_2022.csv uploaded to GCS bucket
+[2023-03-19T00:03:05.782+0000] {p_download_upload.py:74} INFO - Removing downloaded files
+[2023-03-19T00:03:05.783+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-03-19T00:03:05.814+0000] {taskinstance.py:1326} INFO - Marking task as SUCCESS. dag_id=project_data_ingestion_gcs_dag, task_id=local_to_gcs_task, execution_date=20230318T000000, start_date=20230319T000213, end_date=20230319T000305
+[2023-03-19T00:03:05.900+0000] {local_task_job.py:212} INFO - Task exited with return code 0
+[2023-03-19T00:03:05.944+0000] {taskinstance.py:2585} INFO - 0 downstream tasks scheduled from follow-on schedule check

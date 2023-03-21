@@ -1,0 +1,126 @@
+[2023-03-19T23:51:14.388+0000] {processor.py:153} INFO - Started process (PID=44771) to work on /opt/airflow/dags/p_spark_local.py
+[2023-03-19T23:51:14.390+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_spark_local.py for tasks to queue
+[2023-03-19T23:51:14.391+0000] {logging_mixin.py:137} INFO - [2023-03-19T23:51:14.391+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_spark_local.py
+[2023-03-19T23:51:14.412+0000] {logging_mixin.py:137} INFO - [2023-03-19T23:51:14.408+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/p_spark_local.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/p_spark_local.py", line 6, in <module>
+    from pyspark.sql import SparkSession
+ModuleNotFoundError: No module named 'pyspark'
+[2023-03-19T23:51:14.413+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/p_spark_local.py
+[2023-03-19T23:51:14.457+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_spark_local.py took 0.078 seconds
+[2023-03-19T23:51:44.700+0000] {processor.py:153} INFO - Started process (PID=44811) to work on /opt/airflow/dags/p_spark_local.py
+[2023-03-19T23:51:44.702+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_spark_local.py for tasks to queue
+[2023-03-19T23:51:44.707+0000] {logging_mixin.py:137} INFO - [2023-03-19T23:51:44.706+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_spark_local.py
+[2023-03-19T23:51:44.722+0000] {logging_mixin.py:137} INFO - [2023-03-19T23:51:44.721+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/p_spark_local.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/p_spark_local.py", line 6, in <module>
+    from pyspark.sql import SparkSession
+ModuleNotFoundError: No module named 'pyspark'
+[2023-03-19T23:51:44.724+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/p_spark_local.py
+[2023-03-19T23:51:44.765+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_spark_local.py took 0.079 seconds
+[2023-03-19T23:52:15.293+0000] {processor.py:153} INFO - Started process (PID=44853) to work on /opt/airflow/dags/p_spark_local.py
+[2023-03-19T23:52:15.306+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_spark_local.py for tasks to queue
+[2023-03-19T23:52:15.310+0000] {logging_mixin.py:137} INFO - [2023-03-19T23:52:15.309+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_spark_local.py
+[2023-03-19T23:52:15.321+0000] {logging_mixin.py:137} INFO - [2023-03-19T23:52:15.319+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/p_spark_local.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/p_spark_local.py", line 6, in <module>
+    from pyspark.sql import SparkSession
+ModuleNotFoundError: No module named 'pyspark'
+[2023-03-19T23:52:15.330+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/p_spark_local.py
+[2023-03-19T23:52:15.396+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_spark_local.py took 0.134 seconds
+[2023-03-19T23:52:40.465+0000] {processor.py:153} INFO - Started process (PID=44879) to work on /opt/airflow/dags/p_spark_local.py
+[2023-03-19T23:52:40.466+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_spark_local.py for tasks to queue
+[2023-03-19T23:52:40.467+0000] {logging_mixin.py:137} INFO - [2023-03-19T23:52:40.467+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_spark_local.py
+[2023-03-19T23:52:40.479+0000] {logging_mixin.py:137} INFO - [2023-03-19T23:52:40.478+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/p_spark_local.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/p_spark_local.py", line 6, in <module>
+    from pyspark.sql import SparkSession
+ModuleNotFoundError: No module named 'pyspark'
+[2023-03-19T23:52:40.480+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/p_spark_local.py
+[2023-03-19T23:52:40.509+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_spark_local.py took 0.050 seconds
+[2023-03-19T23:53:10.743+0000] {processor.py:153} INFO - Started process (PID=44921) to work on /opt/airflow/dags/p_spark_local.py
+[2023-03-19T23:53:10.746+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_spark_local.py for tasks to queue
+[2023-03-19T23:53:10.747+0000] {logging_mixin.py:137} INFO - [2023-03-19T23:53:10.747+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_spark_local.py
+[2023-03-19T23:53:10.761+0000] {logging_mixin.py:137} INFO - [2023-03-19T23:53:10.759+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/p_spark_local.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/p_spark_local.py", line 6, in <module>
+    from pyspark.sql import SparkSession
+ModuleNotFoundError: No module named 'pyspark'
+[2023-03-19T23:53:10.763+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/p_spark_local.py
+[2023-03-19T23:53:10.801+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_spark_local.py took 0.066 seconds
+[2023-03-19T23:57:57.535+0000] {processor.py:153} INFO - Started process (PID=68) to work on /opt/airflow/dags/p_spark_local.py
+[2023-03-19T23:57:57.556+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_spark_local.py for tasks to queue
+[2023-03-19T23:57:57.571+0000] {logging_mixin.py:137} INFO - [2023-03-19T23:57:57.570+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_spark_local.py
+[2023-03-19T23:57:58.978+0000] {logging_mixin.py:137} INFO - [2023-03-19T23:57:58.960+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/p_spark_local.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/p_spark_local.py", line 80, in <module>
+    spark_processing
+NameError: name 'spark_processing' is not defined
+[2023-03-19T23:57:58.980+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/p_spark_local.py
+[2023-03-19T23:57:59.178+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_spark_local.py took 1.702 seconds
+[2023-03-19T23:58:29.809+0000] {processor.py:153} INFO - Started process (PID=109) to work on /opt/airflow/dags/p_spark_local.py
+[2023-03-19T23:58:29.831+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_spark_local.py for tasks to queue
+[2023-03-19T23:58:29.846+0000] {logging_mixin.py:137} INFO - [2023-03-19T23:58:29.846+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_spark_local.py
+[2023-03-19T23:58:30.475+0000] {logging_mixin.py:137} INFO - [2023-03-19T23:58:30.461+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/p_spark_local.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/p_spark_local.py", line 80, in <module>
+    spark_processing
+NameError: name 'spark_processing' is not defined
+[2023-03-19T23:58:30.486+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/p_spark_local.py
+[2023-03-19T23:58:30.576+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_spark_local.py took 0.786 seconds
+[2023-03-19T23:59:01.056+0000] {processor.py:153} INFO - Started process (PID=142) to work on /opt/airflow/dags/p_spark_local.py
+[2023-03-19T23:59:01.058+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_spark_local.py for tasks to queue
+[2023-03-19T23:59:01.060+0000] {logging_mixin.py:137} INFO - [2023-03-19T23:59:01.060+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_spark_local.py
+[2023-03-19T23:59:01.199+0000] {logging_mixin.py:137} INFO - [2023-03-19T23:59:01.198+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/p_spark_local.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/p_spark_local.py", line 80, in <module>
+    spark_processing
+NameError: name 'spark_processing' is not defined
+[2023-03-19T23:59:01.200+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/p_spark_local.py
+[2023-03-19T23:59:01.236+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_spark_local.py took 0.187 seconds
+[2023-03-19T23:59:33.589+0000] {processor.py:153} INFO - Started process (PID=192) to work on /opt/airflow/dags/p_spark_local.py
+[2023-03-19T23:59:33.608+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/p_spark_local.py for tasks to queue
+[2023-03-19T23:59:33.613+0000] {logging_mixin.py:137} INFO - [2023-03-19T23:59:33.611+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/p_spark_local.py
+[2023-03-19T23:59:33.970+0000] {logging_mixin.py:137} INFO - [2023-03-19T23:59:33.968+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/p_spark_local.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/p_spark_local.py", line 80, in <module>
+    spark_processing
+NameError: name 'spark_processing' is not defined
+[2023-03-19T23:59:33.970+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/p_spark_local.py
+[2023-03-19T23:59:34.026+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/p_spark_local.py took 0.451 seconds

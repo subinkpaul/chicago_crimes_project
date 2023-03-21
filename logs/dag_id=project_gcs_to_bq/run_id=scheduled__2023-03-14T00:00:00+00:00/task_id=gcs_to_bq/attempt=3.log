@@ -1,0 +1,55 @@
+[2023-03-15T19:55:59.774+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: project_gcs_to_bq.gcs_to_bq scheduled__2023-03-14T00:00:00+00:00 [queued]>
+[2023-03-15T19:55:59.788+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: project_gcs_to_bq.gcs_to_bq scheduled__2023-03-14T00:00:00+00:00 [queued]>
+[2023-03-15T19:55:59.788+0000] {taskinstance.py:1282} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-15T19:55:59.788+0000] {taskinstance.py:1283} INFO - Starting attempt 3 of 4
+[2023-03-15T19:55:59.788+0000] {taskinstance.py:1284} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-15T19:55:59.809+0000] {taskinstance.py:1303} INFO - Executing <Task(GCSToBigQueryOperator): gcs_to_bq> on 2023-03-14 00:00:00+00:00
+[2023-03-15T19:55:59.818+0000] {standard_task_runner.py:55} INFO - Started process 6588 to run task
+[2023-03-15T19:55:59.824+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'project_gcs_to_bq', 'gcs_to_bq', 'scheduled__2023-03-14T00:00:00+00:00', '--job-id', '19', '--raw', '--subdir', 'DAGS_FOLDER/p_gcs_to_bq.py', '--cfg-path', '/tmp/tmpb4_1g7_b']
+[2023-03-15T19:55:59.827+0000] {standard_task_runner.py:83} INFO - Job 19: Subtask gcs_to_bq
+[2023-03-15T19:55:59.849+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:250: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2023-03-15T19:55:59.882+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-03-15T19:55:59.927+0000] {task_command.py:388} INFO - Running <TaskInstance: project_gcs_to_bq.gcs_to_bq scheduled__2023-03-14T00:00:00+00:00 [running]> on host 8d6d3f05a6c2
+[2023-03-15T19:56:00.034+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=project_gcs_to_bq
+AIRFLOW_CTX_TASK_ID=gcs_to_bq
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-14T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=3
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-14T00:00:00+00:00
+[2023-03-15T19:56:00.037+0000] {crypto.py:83} WARNING - empty cryptography key - values will not be stored encrypted.
+[2023-03-15T19:56:00.037+0000] {base.py:73} INFO - Using connection ID 'google_cloud_default' for task execution.
+[2023-03-15T19:56:00.038+0000] {gcs_to_bigquery.py:382} INFO - Using existing BigQuery table for storing data...
+[2023-03-15T19:56:00.093+0000] {gcs_to_bigquery.py:386} INFO - Executing: {'load': {'autodetect': True, 'createDisposition': 'CREATE_IF_NEEDED', 'destinationTable': {'projectId': 'dtc-de-course-375420', 'datasetId': 'chicago_crime_all', 'tableId': 'my_table'}, 'sourceFormat': 'CSV', 'sourceUris': ['gs://dtc_data_lake_dtc-de-course-375420/project/*.csv'], 'writeDisposition': 'WRITE_TRUNCATE', 'ignoreUnknownValues': False, 'schema': {'fields': [{'name': 'ID', 'type': 'INTEGER', 'mode': 'NULLABLE'}, {'name': 'Case Number', 'type': 'STRING', 'mode': 'NULLABLE'}, {'name': 'index', 'type': 'INTEGER', 'mode': 'NULLABLE'}, {'name': 'Date', 'type': 'TIMESTAMP', 'mode': 'NULLABLE'}, {'name': 'Block', 'type': 'STRING', 'mode': 'NULLABLE'}, {'name': 'IUCR', 'type': 'STRING', 'mode': 'NULLABLE'}, {'name': 'Primary Type', 'type': 'STRING', 'mode': 'NULLABLE'}, {'name': 'Description', 'type': 'STRING', 'mode': 'NULLABLE'}, {'name': 'Location Description', 'type': 'STRING', 'mode': 'NULLABLE'}, {'name': 'Arrest', 'type': 'INTEGER', 'mode': 'NULLABLE'}, {'name': 'Domestic', 'type': 'INTEGER', 'mode': 'NULLABLE'}, {'name': 'Beat', 'type': 'INTEGER', 'mode': 'NULLABLE'}, {'name': 'District', 'type': 'INTEGER', 'mode': 'NULLABLE'}, {'name': 'Ward', 'type': 'INTEGER', 'mode': 'NULLABLE'}, {'name': 'Community Area', 'type': 'INTEGER', 'mode': 'NULLABLE'}, {'name': 'FBI Code', 'type': 'STRING', 'mode': 'NULLABLE'}, {'name': 'X Coordinate', 'type': 'INTEGER', 'mode': 'NULLABLE'}, {'name': 'Y Coordinate', 'type': 'INTEGER', 'mode': 'NULLABLE'}, {'name': 'Year', 'type': 'INTEGER', 'mode': 'NULLABLE'}, {'name': 'Updated On', 'type': 'TIMESTAMP', 'mode': 'NULLABLE'}, {'name': 'Latitude', 'type': 'FLOAT', 'mode': 'NULLABLE'}, {'name': 'Longitude', 'type': 'FLOAT', 'mode': 'NULLABLE'}, {'name': 'Location', 'type': 'STRING', 'mode': 'NULLABLE'}]}, 'skipLeadingRows': None, 'fieldDelimiter': ',', 'quote': None, 'allowQuotedNewlines': False, 'encoding': 'UTF-8'}}
+[2023-03-15T19:56:00.095+0000] {bigquery.py:1546} INFO - Inserting job ***_project_gcs_to_bq_gcs_to_bq_2023_03_14T00_00_00_00_00_5f3b2685d13b56af159448288e698da1
+[2023-03-15T19:56:00.256+0000] {taskinstance.py:1775} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/cloud/transfers/gcs_to_bigquery.py", line 387, in execute
+    job = self._submit_job(self.hook, job_id)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/cloud/transfers/gcs_to_bigquery.py", line 314, in _submit_job
+    nowait=True,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/common/hooks/base_google.py", line 468, in inner_wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/cloud/hooks/bigquery.py", line 1549, in insert_job
+    job._begin()
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/bigquery/job/base.py", line 518, in _begin
+    timeout=timeout,
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/bigquery/client.py", line 782, in _call_api
+    return call()
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/api_core/retry.py", line 288, in retry_wrapped_func
+    on_error=on_error,
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/api_core/retry.py", line 190, in retry_target
+    return target()
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/_http/__init__.py", line 494, in api_request
+    raise exceptions.from_http_response(response)
+google.api_core.exceptions.BadRequest: 400 POST https://bigquery.googleapis.com/bigquery/v2/projects/dtc-de-course-375420/jobs?prettyPrint=false: Invalid field name "Case Number". Fields must contain only letters, numbers, and underscores, start with a letter or underscore, and be at most 300 characters long.
+[2023-03-15T19:56:00.272+0000] {taskinstance.py:1326} INFO - Marking task as UP_FOR_RETRY. dag_id=project_gcs_to_bq, task_id=gcs_to_bq, execution_date=20230314T000000, start_date=20230315T195559, end_date=20230315T195600
+[2023-03-15T19:56:00.291+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 19 for task gcs_to_bq (400 POST https://bigquery.googleapis.com/bigquery/v2/projects/dtc-de-course-375420/jobs?prettyPrint=false: Invalid field name "Case Number". Fields must contain only letters, numbers, and underscores, start with a letter or underscore, and be at most 300 characters long.; 6588)
+[2023-03-15T19:56:00.317+0000] {local_task_job.py:212} INFO - Task exited with return code 1
+[2023-03-15T19:56:00.345+0000] {taskinstance.py:2585} INFO - 0 downstream tasks scheduled from follow-on schedule check

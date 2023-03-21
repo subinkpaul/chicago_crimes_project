@@ -1,0 +1,34 @@
+[2023-03-20T19:51:18.922+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: project_spark_processing.process_data scheduled__2023-03-19T00:00:00+00:00 [queued]>
+[2023-03-20T19:51:18.942+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: project_spark_processing.process_data scheduled__2023-03-19T00:00:00+00:00 [queued]>
+[2023-03-20T19:51:18.943+0000] {taskinstance.py:1282} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-20T19:51:18.944+0000] {taskinstance.py:1283} INFO - Starting attempt 32 of 33
+[2023-03-20T19:51:18.944+0000] {taskinstance.py:1284} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-20T19:51:18.981+0000] {taskinstance.py:1303} INFO - Executing <Task(DataprocSubmitJobOperator): process_data> on 2023-03-19 00:00:00+00:00
+[2023-03-20T19:51:18.990+0000] {standard_task_runner.py:55} INFO - Started process 1096 to run task
+[2023-03-20T19:51:19.002+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'project_spark_processing', 'process_data', 'scheduled__2023-03-19T00:00:00+00:00', '--job-id', '226', '--raw', '--subdir', 'DAGS_FOLDER/p_submit_job_draft.py', '--cfg-path', '/tmp/tmpk4mv_10b']
+[2023-03-20T19:51:19.007+0000] {standard_task_runner.py:83} INFO - Job 226: Subtask process_data
+[2023-03-20T19:51:19.056+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:250: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2023-03-20T19:51:19.100+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-03-20T19:51:19.163+0000] {task_command.py:388} INFO - Running <TaskInstance: project_spark_processing.process_data scheduled__2023-03-19T00:00:00+00:00 [running]> on host 71cf0a128c31
+[2023-03-20T19:51:19.340+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=project_spark_processing
+AIRFLOW_CTX_TASK_ID=process_data
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-19T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=32
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-19T00:00:00+00:00
+[2023-03-20T19:51:19.342+0000] {dataproc.py:1985} INFO - Submitting job
+[2023-03-20T19:51:19.344+0000] {crypto.py:83} WARNING - empty cryptography key - values will not be stored encrypted.
+[2023-03-20T19:51:19.345+0000] {base.py:73} INFO - Using connection ID 'google_cloud_default' for task execution.
+[2023-03-20T19:51:19.560+0000] {dataproc.py:1997} INFO - Job transform_bq_data9 submitted successfully.
+[2023-03-20T19:51:19.581+0000] {dataproc.py:2017} INFO - Waiting for job transform_bq_data9 to complete
+[2023-03-20T19:52:20.104+0000] {dataproc.py:2021} INFO - Job transform_bq_data9 completed successfully.
+[2023-03-20T19:52:20.175+0000] {taskinstance.py:1326} INFO - Marking task as SUCCESS. dag_id=project_spark_processing, task_id=process_data, execution_date=20230319T000000, start_date=20230320T195118, end_date=20230320T195220
+[2023-03-20T19:52:20.230+0000] {local_task_job.py:212} INFO - Task exited with return code 0
+[2023-03-20T19:52:20.278+0000] {taskinstance.py:2585} INFO - 0 downstream tasks scheduled from follow-on schedule check
