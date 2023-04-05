@@ -11,13 +11,7 @@ The period of the data processing will cover from 2001 to 2022.
 The Chicago city police department has collected a large dataset of crimes that have occurred in the city over the past several years, and they are looking to analyze this data in order to better understand crime patterns and trends. However, the dataset is currently in a CSV format and is not optimized for efficient querying and analysis. Therefore, developing an end-to-end data pipeline that can transform the CSV data into a format that is more suitable for analysis.  The goal of this project is to create a streamlined and efficient process for analyzing crime data that can be used to inform decision-making and improve public safety in the city.
 
 
-## Architecture diagram
-
-![architecture chicago crimes](https://user-images.githubusercontent.com/88390708/230216468-ef38c0d0-0fc8-4394-99ce-8e2749eef9bc.jpg)
-
-Visualization link [here](https://lookerstudio.google.com/s/lrQNEgBjkaE)
-
-## Technologies
+## Used Technologies
 
 
 * __Airflow__: To orchestrate the workflow
@@ -29,4 +23,27 @@ Visualization link [here](https://lookerstudio.google.com/s/lrQNEgBjkaE)
 * __Apache Spark__: Run data transformation
 * __Google Dataproc Cluster__: To run the Spark engine
 * __Google Looker Studio__: Visualization of the findings
+
+## Dataset used
+
+This dataset reflects reported incidents of crime (with the exception of murders where data exists for each victim) that occurred in the City of Chicago from 2001 to 2022. Data is extracted from the Chicago Police Department's CLEAR (Citizen Law Enforcement Analysis and Reporting) system. Dataset is residing in Kaggle and is downloaded using Kaggle API from [here](https://www.kaggle.com/datasets/salikhussaini49/chicago-crimes).
+
+
+
+## Project Architecture
+
+The end-to-end data pipeline includes the next steps:
+
+downloading, processing and uploading of the initial dataset to a DL;
+moving the data from the lake to a DWH;
+transforming the data in the DWH and preparing it for the dashboard;
+dashboard creating.
+You can find the detailed information on the diagram below:
+
+![architecture chicago crimes](https://user-images.githubusercontent.com/88390708/230216468-ef38c0d0-0fc8-4394-99ce-8e2749eef9bc.jpg)
+
+## Final Dashboard
+
+The dashboard can be found [here](https://lookerstudio.google.com/s/lrQNEgBjkaE)
+
 
