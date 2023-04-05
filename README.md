@@ -20,13 +20,13 @@ Visualization link [here](https://lookerstudio.google.com/s/lrQNEgBjkaE)
 ## Technologies
 
 
-__Airflow__: To orchestrate the workflow
-__Terraform__: As Infrastructure as code tool to build the resources efficiently
-__Docker__: To containerize the code and infrastructure
-__Google Cloud VM__: Machine instance where services like docker and airflow are hosted
-__Google Cloud Storage__: As Data Lake
-__Google BigQuery__: As Data Warehouse
-__Apache Spark__: Run data transformation
-__Google Dataproc cluster__: To run the Spark engine
-__Google Looker Studio__: Visualization of the findings
+* __Airflow__: To orchestrate the workflow
+* __Terraform__: As Infrastructure as code tool to build the resources efficiently
+* __Docker__: To containerize the code and infrastructure
+* __Google Cloud VM__: Machine instance where services like docker and airflow are hosted
+* __Google Cloud Storage__: As Data Lake
+* __Google BigQuery__: As Data Warehouse
+* __Apache Spark__: Run data transformation
+* __Google Dataproc Cluster__: To run the Spark engine
+* __Google Looker Studio__: Visualization of the findings
 
