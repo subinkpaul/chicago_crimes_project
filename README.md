@@ -32,18 +32,25 @@ This dataset reflects reported incidents of crime (with the exception of murders
 
 ## Project Architecture
 
-The end-to-end data pipeline includes the next steps:
+The end-to-end data pipeline includes the below steps:
 
 downloading, processing and uploading of the initial dataset to a DL;
 moving the data from the lake to a DWH;
 transforming the data in the DWH and preparing it for the dashboard;
 dashboard creating.
+
 You can find the detailed information on the diagram below:
 
 ![architecture chicago crimes](https://user-images.githubusercontent.com/88390708/230216468-ef38c0d0-0fc8-4394-99ce-8e2749eef9bc.jpg)
+
+
+## Reproducing from scratch
 
 ## Final Dashboard
 
 The dashboard can be found [here](https://lookerstudio.google.com/s/lrQNEgBjkaE)
 
+## Improvements
 
+* Need to integrate unit tests 
+* Create a CI/CD with Github actions
