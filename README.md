@@ -46,4 +46,9 @@ You can find the detailed information on the diagram below:
 
 The dashboard can be found [here](https://lookerstudio.google.com/s/lrQNEgBjkaE)
 
+![image](https://user-images.githubusercontent.com/88390708/230462032-800490d8-2abb-4c58-9cf6-6bca379b8551.png)
+![image](https://user-images.githubusercontent.com/88390708/230462122-a92fc979-6542-463a-886d-68e52ede2f6a.png)
+![image](https://user-images.githubusercontent.com/88390708/230462387-d82ba447-ce33-4ad8-ba25-5a19f8e422eb.png)
+
+
 
