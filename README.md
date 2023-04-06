@@ -32,13 +32,15 @@ This dataset reflects reported incidents of crime (with the exception of murders
 
 ## Project Architecture
 
-The end-to-end data pipeline includes the next steps:
+The end-to-end data pipeline includes the below steps:
 
-Downloading, processing and uploading of the initial dataset to a Data lake;
-Moving the data from the lake to a DWH;
-Cleanse the data in the DWH;
-Transform the data using Spark;
-Dashboard creating.
+* The yearly files are downloaded using Kaggle API to the local
+* The downloaded CSV files are then uploaded to a folder in Google Cloud bucket
+* This folder is loaded to a BigQuery table with all columns as string
+* A new table is created from this original table with correct data types as well as partitioned by Month and Clustered by Primary_Type of Crime for optimised performance
+* Spin up a dataproc cluster and execute the pyspark job where this data is transformed
+* Final table after transformation is pushed down as new table to BiqQuery
+* Configure Google Looker Studio to power dashboards from this final table  
 
 You can find the detailed information on the diagram below:
 
