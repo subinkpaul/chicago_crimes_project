@@ -50,7 +50,7 @@ def main(input_table,output_table_crime,output_table_daily):
     print('totalcrimes df created')
 
     # Group by the date column and get the count of records
-    output_crimes_by_day_df = df.groupBy("New_Date").count()
+    output_crimes_by_day_df = df.groupBy("New_Date","Primary_Type","Arrest").count()
 
     print('daywise count df created')
 
