@@ -34,13 +34,79 @@ This dataset reflects reported incidents of crime (with the exception of murders
 
 The end-to-end data pipeline includes the next steps:
 
-downloading, processing and uploading of the initial dataset to a DL;
-moving the data from the lake to a DWH;
-transforming the data in the DWH and preparing it for the dashboard;
-dashboard creating.
+Downloading, processing and uploading of the initial dataset to a Data lake;
+Moving the data from the lake to a DWH;
+Cleanse the data in the DWH;
+Transform the data using Spark;
+Dashboard creating.
+
 You can find the detailed information on the diagram below:
 
 ![architecture chicago crimes](https://user-images.githubusercontent.com/88390708/230216468-ef38c0d0-0fc8-4394-99ce-8e2749eef9bc.jpg)
+
+
+## Reproducing from scratch
+
+## 1. To reproduce this code entirely from scratch, you will need to create a GCP account:
+Set up your free GCP account! You'll get free $300 credit or 90 days of free usage.
+* Set up your  very own [service account](https://cloud.google.com/)
+* Create key in JSON
+* Save to your directory
+* download and install [Google Cloud CLI](https://cloud.google.com/sdk/docs/install)
+* run `export GOOGLE_APPLICATION_CREDENTIALS=<path/to/service/key>.json`
+* run `gcloud auth application-default login`
+* new browser window will pop up having you authenticate the gcloud CLI. Make sure it says `You are now authenticated with the gcloud CLI!`
+
+## Next for GCP: Add permissions to your Service Account!
+* IAM & Admin > IAM. Click on the edit icon for your project
+* Add roles
+    * Storage Admin (for the bucket)
+    * Storage Object Admin (for objects in the bucket -- read/write/create/delete)
+    * BigQuery Admin
+* Enable APIs
+    * https://console.cloud.google.com/apis/library/iam.googleapis.com
+    * https://console.cloud.google.com/apis/library/iamcredentials.googleapis.com
+
+## 2. You'll need your IaC to build your infrastructure. In this project, Terraform is used
+Download Terraform!
+* Download here: https://www.terraform.io/downloads
+
+Initializing Terraform
+* Create a new directory with `main.tf`, and initialize your config file. [How to Start](https://learn.hashicorp.com/tutorials/terraform/google-cloud-platform-build?in=terraform/gcp-get-started)
+    * *OPTIONAL* Create `variables.tf` files to store your variables
+* `terraform init`
+* `terraform plan`
+* `terraform apply`
+
+If you would like to remove your stack from the Cloud, use the `terraform destroy` command. 
+
+
+## 3. Set up Docker, Dockerfile, and docker-compose to run Airflow
+The next steps provide you with the instructions of running Apache Airflow, which will allow you to run the entire 
+orchestration, taking into account that you have already set up a GCP account.
+
+You can run Airflow locally using docker-compose. Before running it, please make sure you have at least 5 GB of free RAM.
+Alternatively, you can launch Airflow on a virtual machine in GCP (in this case, please refer to [this video](https://www.youtube.com/watch?v=ae-CV2KfoN0&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=16)). 
+
+Setup
+Go to the [airflow](airflow) subdirectory: here you can find the [Dockerfile](airflow/Dockerfile) and the lightweight version
+of the [docker-compose.yaml](airflow/docker-compose.yaml) file that are required to run Airflow. 
+
+The lightweight version of docker-compose file contains the minimum required set of components to run data pipelines. 
+The only things you need to specify before launching it are your Project ID (`GCP_PROJECT_ID`) and Cloud Storage name (`GCP_GCS_BUCKET`)
+in the [docker-compose.yaml](airflow/docker-compose.yaml). Please specify these variables according to your actual GCP setup.
+
+You can easily run Airflow using the following commands:
+* `docker-compose build` to build the image (takes ~15 mins for the first-time);
+* `docker-compose up airflow-init` to initialize the Airflow scheduler, DB and other stuff;
+* `docker-compose up` to kick up the all the services from the container.
+
+Now you can launch Airflow UI and run the DAGs.
+> Note: If you want to stop Airflow, please type `docker-compose down` command in your terminal.
+
+## 4. Run the DAGs
+In the screenshot below:
+* run the `data_ingestion_gcp_dag` first and wait for it to complete. 
 
 ## Final Dashboard
 
@@ -50,5 +116,8 @@ The dashboard can be found [here](https://lookerstudio.google.com/s/lrQNEgBjkaE)
 ![image](https://user-images.githubusercontent.com/88390708/230462122-a92fc979-6542-463a-886d-68e52ede2f6a.png)
 ![image](https://user-images.githubusercontent.com/88390708/230462387-d82ba447-ce33-4ad8-ba25-5a19f8e422eb.png)
 
+## Improvements
 
+* Need to integrate unit tests 
+* Create a CI/CD with Github actions
 
