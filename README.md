@@ -89,12 +89,11 @@ You can run Airflow locally using docker-compose. Before running it, please make
 Alternatively, you can launch Airflow on a virtual machine in GCP (in this case, please refer to [this video](https://www.youtube.com/watch?v=ae-CV2KfoN0&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=16)). 
 
 Setup
-Go to the [airflow](airflow) subdirectory: here you can find the [Dockerfile](airflow/Dockerfile) and the lightweight version
-of the [docker-compose.yaml](airflow/docker-compose.yaml) file that are required to run Airflow. 
+In the project repository, you can find the [Dockerfile](Dockerfile) and the [docker-compose.yaml](docker-compose.yaml) file that are required to run Airflow. 
 
 The lightweight version of docker-compose file contains the minimum required set of components to run data pipelines. 
 The only things you need to specify before launching it are your Project ID (`GCP_PROJECT_ID`) and Cloud Storage name (`GCP_GCS_BUCKET`)
-in the [docker-compose.yaml](airflow/docker-compose.yaml). Please specify these variables according to your actual GCP setup.
+in the [docker-compose.yaml](docker-compose.yaml). Please specify these variables according to your actual GCP setup.
 
 You can easily run Airflow using the following commands:
 * `docker-compose build` to build the image (takes ~15 mins for the first-time);
@@ -105,8 +104,16 @@ Now you can launch Airflow UI and run the DAGs.
 > Note: If you want to stop Airflow, please type `docker-compose down` command in your terminal.
 
 ## 4. Run the DAGs
+
+Open the [http://localhost:8080/](http://localhost:8080/) address in your browser and login using airflow username and airflow password.
+
 In the screenshot below:
-* run the `data_ingestion_gcp_dag` first and wait for it to complete. 
+* Run the `project_masterdag` and wait for it to complete. 
+
+![image](https://user-images.githubusercontent.com/88390708/230467580-1c5a9728-3530-49bf-b502-a164adc34a03.png)
+
+![image](https://user-images.githubusercontent.com/88390708/230468186-a92bc41a-b2be-4c2a-bc49-9c73c7ef66ec.png)
+
 
 ## Final Dashboard
 
