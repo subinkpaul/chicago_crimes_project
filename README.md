@@ -48,24 +48,37 @@ You can find the detailed information on the diagram below:
 ## Reproducing from scratch
 
 ## 1. To reproduce this code entirely from scratch, you will need to create a GCP account:
-Set up your free GCP account! You'll get free $300 credit or 90 days of free usage.
-* Set up your  very own [service account](https://cloud.google.com/)
-* Create key in JSON
-* Save to your directory
-* download and install [Google Cloud CLI](https://cloud.google.com/sdk/docs/install)
-* run `export GOOGLE_APPLICATION_CREDENTIALS=<path/to/service/key>.json`
-* run `gcloud auth application-default login`
-* new browser window will pop up having you authenticate the gcloud CLI. Make sure it says `You are now authenticated with the gcloud CLI!`
 
-## Next for GCP: Add permissions to your Service Account!
-* IAM & Admin > IAM. Click on the edit icon for your project
-* Add roles
-    * Storage Admin (for the bucket)
-    * Storage Object Admin (for objects in the bucket -- read/write/create/delete)
-    * BigQuery Admin
-* Enable APIs
-    * https://console.cloud.google.com/apis/library/iam.googleapis.com
-    * https://console.cloud.google.com/apis/library/iamcredentials.googleapis.com
+To set up GCP, please follow the steps below:
+1. If you don't have a GCP account, please create a free trial.
+2. Setup new project and write down your Project ID.
+3. Configure service account to get access to this project and download auth-keys (.json). Please check the service 
+account has all the permissions below:
+   * Viewer
+   * Storage Admin
+   * Storage Object Admin
+   * BigQuery Admin 
+   
+   (if you have any trouble with permissions when you are running the airflow dag, just add these permissions aswell)
+   * BigQuery Data Editor
+   * BigQuery Data Owner
+   * BigQuery Data Viewer
+   * BigQuery Job User
+   * BigQuery User
+4. Download [SDK](https://cloud.google.com/sdk) for local setup.
+ 
+5. Set environment variable to point to your downloaded auth-keys:
+```bash
+export GOOGLE_APPLICATION_CREDENTIALS="<path/to/your/service-account-authkeys>.json"
+
+# Refresh token/session, and verify authentication
+gcloud auth application-default login
+```
+6. Enable the following options under the APIs and services section:
+   * [Identity and Access Management (IAM) API](https://console.cloud.google.com/apis/library/iam.googleapis.com)
+   * [IAM service account credentials API](https://console.cloud.google.com/apis/library/iamcredentials.googleapis.com)
+   * [Compute Engine API](https://console.developers.google.com/apis/api/compute.googleapis.com) (if you are going to use VM instance)
+
 
 ## 2. You'll need your IaC to build your infrastructure. In this project, Terraform is used
 Download Terraform!
