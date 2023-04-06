@@ -34,7 +34,7 @@ This dataset reflects reported incidents of crime (with the exception of murders
 
 The end-to-end data pipeline includes the below steps:
 
-* The yearly files are downloaded using Kaggle API to the local
+* The yearly files are downloaded using Kaggle API to the local machine or VM
 * The downloaded CSV files are then uploaded to a folder in Google Cloud bucket
 * This folder is loaded to a BigQuery table with all columns as string
 * A new table is created from this original table with correct data types as well as partitioned by Month and Clustered by Primary_Type of Crime for optimised performance
